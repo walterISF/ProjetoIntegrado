@@ -25,7 +25,7 @@ namespace Projeto_B
             if(login==0)
             { 
                 GPB_login.Visible = true;
-                Point pt = new Point(578, 220);
+                Point pt = new Point(626, 93);
                 LNK_sobre.Location = pt;
 
                 Point pt2 = new Point(578, 240);
