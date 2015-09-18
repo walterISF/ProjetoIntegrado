@@ -20,14 +20,41 @@ namespace Projeto_B
 
         private void LNK_login_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            GBOX_login.PointToScreen()
-            GBOX_login.Show();
+            if(GBOX_login.Visible==true)
+            {
+                GBOX_login.Visible = false;
+            }
+            else
+            {
+                GBOX_login.Show();
+            }
+            
             
         }
 
         private void LNK_sobre_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
+        }
+
+        private void LNK_sair_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var result = MessageBox.Show("Deseja relmente Sair?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if(result==DialogResult.Yes)
+            {
+                this.Close();
+            }
+         
+        }
+
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
         }
     }
 }
