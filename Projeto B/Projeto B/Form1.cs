@@ -20,31 +20,13 @@ namespace Projeto_B
 
         private void LNK_login_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if(GBOX_login.Visible==true)
-            {
-                GBOX_login.Visible = false;
-            }
-            else
-            {
-                GBOX_login.Show();
-            }
-            
+                        
             
         }
 
         private void LNK_sobre_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
-        }
-
-        private void LNK_sair_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            var result = MessageBox.Show("Deseja relmente Sair?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            if(result==DialogResult.Yes)
-            {
-                this.Close();
-            }
-         
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
@@ -61,6 +43,32 @@ namespace Projeto_B
         {
             Form datecalc = new Projeto_B.Form2();
             datecalc.ShowDialog();
+        }
+
+        private void LNK_sair_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Deseja relmente Sair?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void LBL_login_Click(object sender, EventArgs e)
+        {
+            FrmLogin login = new FrmLogin();
+            login.ShowDialog();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            FrmSobre sobre = new FrmSobre();
+            sobre.ShowDialog();
         }
     }
 }

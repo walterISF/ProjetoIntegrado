@@ -32,8 +32,8 @@
             this.GBOX_resultados = new System.Windows.Forms.GroupBox();
             this.LBL_resultados = new System.Windows.Forms.Label();
             this.GBOX_entrada = new System.Windows.Forms.GroupBox();
-            this.LBOX_calendarios = new System.Windows.Forms.ListBox();
             this.LBL_entradas = new System.Windows.Forms.Label();
+            this.LBOX_calendarios = new System.Windows.Forms.ListBox();
             this.LBL_dataA = new System.Windows.Forms.Label();
             this.LBL_dataB = new System.Windows.Forms.Label();
             this.GBOX_incrementos = new System.Windows.Forms.GroupBox();
@@ -63,9 +63,10 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pictureBox1.Image = global::Projeto_B.Properties.Resources.Divisor;
-            this.pictureBox1.Location = new System.Drawing.Point(273, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(205, 12);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(2, 420);
+            this.pictureBox1.Size = new System.Drawing.Size(2, 341);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -75,18 +76,21 @@
             this.GBOX_resultados.Controls.Add(this.LBL_resultados);
             this.GBOX_resultados.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GBOX_resultados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.GBOX_resultados.Location = new System.Drawing.Point(289, 253);
+            this.GBOX_resultados.Location = new System.Drawing.Point(217, 206);
+            this.GBOX_resultados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.GBOX_resultados.Name = "GBOX_resultados";
-            this.GBOX_resultados.Size = new System.Drawing.Size(337, 164);
+            this.GBOX_resultados.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GBOX_resultados.Size = new System.Drawing.Size(253, 133);
             this.GBOX_resultados.TabIndex = 8;
             this.GBOX_resultados.TabStop = false;
             this.GBOX_resultados.Text = "Resultados";
             // 
             // LBL_resultados
             // 
-            this.LBL_resultados.Location = new System.Drawing.Point(18, 30);
+            this.LBL_resultados.Location = new System.Drawing.Point(14, 24);
+            this.LBL_resultados.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LBL_resultados.Name = "LBL_resultados";
-            this.LBL_resultados.Size = new System.Drawing.Size(304, 118);
+            this.LBL_resultados.Size = new System.Drawing.Size(228, 96);
             this.LBL_resultados.TabIndex = 0;
             // 
             // GBOX_entrada
@@ -94,12 +98,22 @@
             this.GBOX_entrada.Controls.Add(this.LBL_entradas);
             this.GBOX_entrada.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GBOX_entrada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.GBOX_entrada.Location = new System.Drawing.Point(289, 78);
+            this.GBOX_entrada.Location = new System.Drawing.Point(217, 63);
+            this.GBOX_entrada.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.GBOX_entrada.Name = "GBOX_entrada";
-            this.GBOX_entrada.Size = new System.Drawing.Size(337, 159);
+            this.GBOX_entrada.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GBOX_entrada.Size = new System.Drawing.Size(253, 129);
             this.GBOX_entrada.TabIndex = 16;
             this.GBOX_entrada.TabStop = false;
             this.GBOX_entrada.Text = "Entrada";
+            // 
+            // LBL_entradas
+            // 
+            this.LBL_entradas.Location = new System.Drawing.Point(11, 17);
+            this.LBL_entradas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LBL_entradas.Name = "LBL_entradas";
+            this.LBL_entradas.Size = new System.Drawing.Size(230, 101);
+            this.LBL_entradas.TabIndex = 1;
             // 
             // LBOX_calendarios
             // 
@@ -107,33 +121,28 @@
             this.LBOX_calendarios.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBOX_calendarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.LBOX_calendarios.FormattingEnabled = true;
-            this.LBOX_calendarios.ItemHeight = 21;
+            this.LBOX_calendarios.ItemHeight = 17;
             this.LBOX_calendarios.Items.AddRange(new object[] {
             "Calendarios:",
             "Judaico",
             "Islamico",
             "Chines"});
-            this.LBOX_calendarios.Location = new System.Drawing.Point(289, 120);
+            this.LBOX_calendarios.Location = new System.Drawing.Point(217, 98);
+            this.LBOX_calendarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LBOX_calendarios.Name = "LBOX_calendarios";
-            this.LBOX_calendarios.Size = new System.Drawing.Size(337, 109);
+            this.LBOX_calendarios.Size = new System.Drawing.Size(254, 89);
             this.LBOX_calendarios.TabIndex = 41;
             this.LBOX_calendarios.Visible = false;
-            // 
-            // LBL_entradas
-            // 
-            this.LBL_entradas.Location = new System.Drawing.Point(15, 21);
-            this.LBL_entradas.Name = "LBL_entradas";
-            this.LBL_entradas.Size = new System.Drawing.Size(307, 124);
-            this.LBL_entradas.TabIndex = 1;
             // 
             // LBL_dataA
             // 
             this.LBL_dataA.AutoSize = true;
             this.LBL_dataA.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_dataA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.LBL_dataA.Location = new System.Drawing.Point(13, 15);
+            this.LBL_dataA.Location = new System.Drawing.Point(10, 12);
+            this.LBL_dataA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LBL_dataA.Name = "LBL_dataA";
-            this.LBL_dataA.Size = new System.Drawing.Size(0, 23);
+            this.LBL_dataA.Size = new System.Drawing.Size(0, 18);
             this.LBL_dataA.TabIndex = 23;
             // 
             // LBL_dataB
@@ -141,9 +150,10 @@
             this.LBL_dataB.AutoSize = true;
             this.LBL_dataB.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_dataB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.LBL_dataB.Location = new System.Drawing.Point(13, 106);
+            this.LBL_dataB.Location = new System.Drawing.Point(10, 86);
+            this.LBL_dataB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LBL_dataB.Name = "LBL_dataB";
-            this.LBL_dataB.Size = new System.Drawing.Size(0, 23);
+            this.LBL_dataB.Size = new System.Drawing.Size(0, 18);
             this.LBL_dataB.TabIndex = 25;
             // 
             // GBOX_incrementos
@@ -154,9 +164,11 @@
             this.GBOX_incrementos.Controls.Add(this.label4);
             this.GBOX_incrementos.Controls.Add(this.label3);
             this.GBOX_incrementos.Controls.Add(this.label2);
-            this.GBOX_incrementos.Location = new System.Drawing.Point(16, 96);
+            this.GBOX_incrementos.Location = new System.Drawing.Point(12, 78);
+            this.GBOX_incrementos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.GBOX_incrementos.Name = "GBOX_incrementos";
-            this.GBOX_incrementos.Size = new System.Drawing.Size(241, 65);
+            this.GBOX_incrementos.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GBOX_incrementos.Size = new System.Drawing.Size(181, 53);
             this.GBOX_incrementos.TabIndex = 30;
             this.GBOX_incrementos.TabStop = false;
             this.GBOX_incrementos.Visible = false;
@@ -165,10 +177,11 @@
             // 
             this.TXT_meses.BackColor = System.Drawing.Color.Gainsboro;
             this.TXT_meses.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXT_meses.Location = new System.Drawing.Point(181, 31);
+            this.TXT_meses.Location = new System.Drawing.Point(136, 25);
+            this.TXT_meses.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TXT_meses.Mask = "00";
             this.TXT_meses.Name = "TXT_meses";
-            this.TXT_meses.Size = new System.Drawing.Size(48, 26);
+            this.TXT_meses.Size = new System.Drawing.Size(37, 22);
             this.TXT_meses.TabIndex = 34;
             this.TXT_meses.Text = "00";
             this.TXT_meses.Click += new System.EventHandler(this.TXT_meses_Click);
@@ -178,10 +191,11 @@
             // 
             this.TXT_semanas.BackColor = System.Drawing.Color.Gainsboro;
             this.TXT_semanas.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXT_semanas.Location = new System.Drawing.Point(91, 31);
+            this.TXT_semanas.Location = new System.Drawing.Point(68, 25);
+            this.TXT_semanas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TXT_semanas.Mask = "00";
             this.TXT_semanas.Name = "TXT_semanas";
-            this.TXT_semanas.Size = new System.Drawing.Size(48, 26);
+            this.TXT_semanas.Size = new System.Drawing.Size(37, 22);
             this.TXT_semanas.TabIndex = 35;
             this.TXT_semanas.Text = "00";
             this.TXT_semanas.Click += new System.EventHandler(this.TXT_semanas_Click);
@@ -191,10 +205,11 @@
             // 
             this.TXT_dias.BackColor = System.Drawing.Color.Gainsboro;
             this.TXT_dias.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXT_dias.Location = new System.Drawing.Point(9, 31);
+            this.TXT_dias.Location = new System.Drawing.Point(7, 25);
+            this.TXT_dias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TXT_dias.Mask = "000";
             this.TXT_dias.Name = "TXT_dias";
-            this.TXT_dias.Size = new System.Drawing.Size(48, 26);
+            this.TXT_dias.Size = new System.Drawing.Size(37, 22);
             this.TXT_dias.TabIndex = 33;
             this.TXT_dias.Text = "000";
             this.TXT_dias.Click += new System.EventHandler(this.TXT_dias_Click);
@@ -205,9 +220,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label4.Location = new System.Drawing.Point(178, 12);
+            this.label4.Location = new System.Drawing.Point(134, 10);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 18);
+            this.label4.Size = new System.Drawing.Size(43, 14);
             this.label4.TabIndex = 2;
             this.label4.Text = "Meses";
             // 
@@ -216,9 +232,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label3.Location = new System.Drawing.Point(88, 12);
+            this.label3.Location = new System.Drawing.Point(66, 10);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 18);
+            this.label3.Size = new System.Drawing.Size(57, 14);
             this.label3.TabIndex = 1;
             this.label3.Text = "Semanas";
             // 
@@ -227,9 +244,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label2.Location = new System.Drawing.Point(7, 13);
+            this.label2.Location = new System.Drawing.Point(5, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 18);
+            this.label2.Size = new System.Drawing.Size(32, 14);
             this.label2.TabIndex = 0;
             this.label2.Text = "Dias";
             // 
@@ -239,10 +257,11 @@
             this.TXT_dataA.Enabled = false;
             this.TXT_dataA.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXT_dataA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.TXT_dataA.Location = new System.Drawing.Point(16, 41);
+            this.TXT_dataA.Location = new System.Drawing.Point(12, 33);
+            this.TXT_dataA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TXT_dataA.Mask = "00/00/0000";
             this.TXT_dataA.Name = "TXT_dataA";
-            this.TXT_dataA.Size = new System.Drawing.Size(241, 29);
+            this.TXT_dataA.Size = new System.Drawing.Size(182, 25);
             this.TXT_dataA.TabIndex = 31;
             this.TXT_dataA.TextChanged += new System.EventHandler(this.TXT_dataA_TextChanged);
             // 
@@ -252,10 +271,11 @@
             this.TXT_dataB.Enabled = false;
             this.TXT_dataB.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXT_dataB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.TXT_dataB.Location = new System.Drawing.Point(13, 131);
+            this.TXT_dataB.Location = new System.Drawing.Point(10, 106);
+            this.TXT_dataB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TXT_dataB.Mask = "00/00/0000";
             this.TXT_dataB.Name = "TXT_dataB";
-            this.TXT_dataB.Size = new System.Drawing.Size(241, 29);
+            this.TXT_dataB.Size = new System.Drawing.Size(182, 25);
             this.TXT_dataB.TabIndex = 32;
             this.TXT_dataB.TextChanged += new System.EventHandler(this.TXT_dataB_TextChanged);
             // 
@@ -267,9 +287,10 @@
             this.RBTN_calculo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.RBTN_calculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RBTN_calculo.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBTN_calculo.Location = new System.Drawing.Point(95, 189);
+            this.RBTN_calculo.Location = new System.Drawing.Point(71, 154);
+            this.RBTN_calculo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RBTN_calculo.Name = "RBTN_calculo";
-            this.RBTN_calculo.Size = new System.Drawing.Size(144, 33);
+            this.RBTN_calculo.Size = new System.Drawing.Size(120, 28);
             this.RBTN_calculo.TabIndex = 33;
             this.RBTN_calculo.Text = "Cálculo de idade";
             this.RBTN_calculo.UseVisualStyleBackColor = true;
@@ -283,9 +304,10 @@
             this.RBTN_diferenca.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.RBTN_diferenca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RBTN_diferenca.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBTN_diferenca.Location = new System.Drawing.Point(54, 227);
+            this.RBTN_diferenca.Location = new System.Drawing.Point(40, 184);
+            this.RBTN_diferenca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RBTN_diferenca.Name = "RBTN_diferenca";
-            this.RBTN_diferenca.Size = new System.Drawing.Size(185, 33);
+            this.RBTN_diferenca.Size = new System.Drawing.Size(151, 28);
             this.RBTN_diferenca.TabIndex = 34;
             this.RBTN_diferenca.Text = "Diferença entre datas";
             this.RBTN_diferenca.UseVisualStyleBackColor = true;
@@ -299,9 +321,10 @@
             this.RBTN_incremento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.RBTN_incremento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RBTN_incremento.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBTN_incremento.Location = new System.Drawing.Point(60, 265);
+            this.RBTN_incremento.Location = new System.Drawing.Point(45, 215);
+            this.RBTN_incremento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RBTN_incremento.Name = "RBTN_incremento";
-            this.RBTN_incremento.Size = new System.Drawing.Size(179, 33);
+            this.RBTN_incremento.Size = new System.Drawing.Size(145, 28);
             this.RBTN_incremento.TabIndex = 35;
             this.RBTN_incremento.Text = "Incremento de datas";
             this.RBTN_incremento.UseVisualStyleBackColor = true;
@@ -315,9 +338,10 @@
             this.RBTN_decremento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.RBTN_decremento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RBTN_decremento.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBTN_decremento.Location = new System.Drawing.Point(55, 303);
+            this.RBTN_decremento.Location = new System.Drawing.Point(41, 246);
+            this.RBTN_decremento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RBTN_decremento.Name = "RBTN_decremento";
-            this.RBTN_decremento.Size = new System.Drawing.Size(184, 33);
+            this.RBTN_decremento.Size = new System.Drawing.Size(150, 28);
             this.RBTN_decremento.TabIndex = 36;
             this.RBTN_decremento.Text = "Decremento de datas";
             this.RBTN_decremento.UseVisualStyleBackColor = true;
@@ -331,9 +355,10 @@
             this.RBTN_info.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.RBTN_info.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RBTN_info.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBTN_info.Location = new System.Drawing.Point(27, 341);
+            this.RBTN_info.Location = new System.Drawing.Point(20, 277);
+            this.RBTN_info.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RBTN_info.Name = "RBTN_info";
-            this.RBTN_info.Size = new System.Drawing.Size(212, 33);
+            this.RBTN_info.Size = new System.Drawing.Size(169, 28);
             this.RBTN_info.TabIndex = 37;
             this.RBTN_info.Text = "Informações sobre datas";
             this.RBTN_info.UseVisualStyleBackColor = true;
@@ -347,9 +372,10 @@
             this.RBTN_outros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.RBTN_outros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RBTN_outros.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBTN_outros.Location = new System.Drawing.Point(73, 379);
+            this.RBTN_outros.Location = new System.Drawing.Point(55, 308);
+            this.RBTN_outros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RBTN_outros.Name = "RBTN_outros";
-            this.RBTN_outros.Size = new System.Drawing.Size(166, 33);
+            this.RBTN_outros.Size = new System.Drawing.Size(134, 28);
             this.RBTN_outros.TabIndex = 38;
             this.RBTN_outros.Text = "Outros calendários";
             this.RBTN_outros.UseVisualStyleBackColor = true;
@@ -359,9 +385,10 @@
             // 
             this.BTN_validar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.BTN_validar.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_validar.Location = new System.Drawing.Point(289, 20);
+            this.BTN_validar.Location = new System.Drawing.Point(217, 16);
+            this.BTN_validar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BTN_validar.Name = "BTN_validar";
-            this.BTN_validar.Size = new System.Drawing.Size(119, 43);
+            this.BTN_validar.Size = new System.Drawing.Size(89, 35);
             this.BTN_validar.TabIndex = 39;
             this.BTN_validar.Text = "Validar";
             this.BTN_validar.UseVisualStyleBackColor = true;
@@ -381,9 +408,10 @@
             "18/05/2015",
             "12/12/2018",
             "31/12/2022"});
-            this.CBOX_datas.Location = new System.Drawing.Point(289, 41);
+            this.CBOX_datas.Location = new System.Drawing.Point(217, 33);
+            this.CBOX_datas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CBOX_datas.Name = "CBOX_datas";
-            this.CBOX_datas.Size = new System.Drawing.Size(172, 29);
+            this.CBOX_datas.Size = new System.Drawing.Size(130, 25);
             this.CBOX_datas.TabIndex = 40;
             this.CBOX_datas.Text = "Escolha uma data";
             this.CBOX_datas.Visible = false;
@@ -391,10 +419,10 @@
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(653, 453);
+            this.ClientSize = new System.Drawing.Size(490, 368);
             this.Controls.Add(this.LBOX_calendarios);
             this.Controls.Add(this.CBOX_datas);
             this.Controls.Add(this.BTN_validar);
@@ -414,8 +442,10 @@
             this.Controls.Add(this.GBOX_incrementos);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculadora de datas";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.GBOX_resultados.ResumeLayout(false);
