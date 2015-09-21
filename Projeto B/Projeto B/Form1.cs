@@ -20,15 +20,8 @@ namespace Projeto_B
 
         private void LNK_login_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if(GBOX_login.Visible==true)
-            {
-                GBOX_login.Visible = false;
-            }
-            else
-            {
-                GBOX_login.Show();
-            }
-            
+            FRM_login login = new FRM_login();
+            login.ShowDialog();
             
         }
 
