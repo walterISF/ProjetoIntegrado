@@ -49,5 +49,11 @@ namespace Projeto_B
         {
             
         }
+
+        private void BTN_calc_Click(object sender, EventArgs e)
+        {
+            Form datecalc = new Projeto_B.Form2();
+            datecalc.ShowDialog();
+        }
     }
 }
