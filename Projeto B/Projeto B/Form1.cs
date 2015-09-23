@@ -55,7 +55,7 @@ namespace Projeto_B
 
         private void label1_Click(object sender, EventArgs e)
         {
-                this.Close();
+                
         }
 
         private void LBL_login_Click(object sender, EventArgs e)
@@ -64,10 +64,15 @@ namespace Projeto_B
             login.ShowDialog();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void LBL_sobre_Click(object sender, EventArgs e)
         {
             FrmSobre sobre = new FrmSobre();
             sobre.ShowDialog();
+        }
+
+        private void LBL_sair_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

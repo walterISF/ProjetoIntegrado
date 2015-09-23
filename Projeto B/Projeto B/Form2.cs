@@ -409,7 +409,7 @@ namespace Projeto_B
                 LBOX_calendarios.Items.AddRange(new object[]{"Calendarios",
                                                              "Judaico: 24, Elul 5771",
                                                              "Islamico: 24, Shawwal 1432",
-                                                             "Chines: 1995 - ano da Lebre"});
+                                                             "Chines: 2011 - ano da Lebre"});
             }
             if (CBOX_datas.SelectedIndex == 3)
             {
@@ -417,7 +417,7 @@ namespace Projeto_B
                 LBOX_calendarios.Items.AddRange(new object[]{"Calendarios",
                                                              "Judaico: 10, Sivan 5772",
                                                              "Islamico: 10, Rajab 1433",
-                                                             "Chines: 1995 - ano do Dragão"});
+                                                             "Chines: 2012 - ano do Dragão"});
             }
             if (CBOX_datas.SelectedIndex == 4)
             {
@@ -425,7 +425,7 @@ namespace Projeto_B
                 LBOX_calendarios.Items.AddRange(new object[]{"Calendarios",
                                                              "Judaico: 29, Lyar 5775",
                                                              "Islamico: 29, Rajab 1436",
-                                                             "Chines: 1995 - ano da Ovelha"});
+                                                             "Chines: 2015 - ano da Ovelha"});
             }
             if (CBOX_datas.SelectedIndex == 5)
             {
@@ -433,7 +433,7 @@ namespace Projeto_B
                 LBOX_calendarios.Items.AddRange(new object[]{"Calendarios",
                                                              "Judaico: 28, Kislev 5773",
                                                              "Islamico: 3, Rabi'ath Thani 1440",
-                                                             "Chines: 1995 - ano do Cão"});
+                                                             "Chines: 2018 - ano do Cão"});
             }
             if (CBOX_datas.SelectedIndex == 6)
             {
@@ -441,7 +441,7 @@ namespace Projeto_B
                 LBOX_calendarios.Items.AddRange(new object[]{"Calendarios",
                                                              "Judaico: 7, Tevet 5783",
                                                              "Islamico: 7, Jumada t-Tania 1444",
-                                                             "Chines: 1995 - ano do Tigre"});
+                                                             "Chines: 2022 - ano do Tigre"});
             }
         }
     }
