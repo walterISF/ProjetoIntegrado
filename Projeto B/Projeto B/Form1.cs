@@ -36,7 +36,10 @@ namespace Projeto_B
 
         private void FormPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+            if (MessageBox.Show("Encerrar a aplicação ?", "Encerrando...",
+                               MessageBoxButtons.YesNo,
+                               MessageBoxIcon.Question) == DialogResult.No)
+                e.Cancel = true;
         }
 
         private void BTN_calc_Click(object sender, EventArgs e)
@@ -52,11 +55,7 @@ namespace Projeto_B
 
         private void label1_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Deseja relmente Sair?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            if (result == DialogResult.Yes)
-            {
                 this.Close();
-            }
         }
 
         private void LBL_login_Click(object sender, EventArgs e)

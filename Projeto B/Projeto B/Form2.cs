@@ -307,18 +307,28 @@ namespace Projeto_B
                 DateTime datainc;
                 if (DateTime.TryParse(TXT_dataA.Text, out datainc))
                 {
-                    int auxdias, auxsemanas, auxmeses;
-                    auxdias = int.Parse(TXT_dias.Text);
-                    auxsemanas = int.Parse(TXT_semanas.Text);
-                    auxsemanas *= 7;
-                    auxmeses = int.Parse(TXT_meses.Text);
-                    auxmeses *= 30;
+                    try
+                    {
+                        int auxdias, auxsemanas, auxmeses;
+                        auxdias = int.Parse(TXT_dias.Text);
+                        auxsemanas = int.Parse(TXT_semanas.Text);
+                        auxsemanas *= 7;
+                        auxmeses = int.Parse(TXT_meses.Text);
+                        auxmeses *= 30;
 
-                    dias = auxdias + auxsemanas + auxmeses;
+                        dias = auxdias + auxsemanas + auxmeses;
 
-                    datainc = datainc.AddDays(dias);
+                        datainc = datainc.AddDays(dias);
 
-                    LBL_resultados.Text = "Data com incremento:\n" + datainc.ToShortDateString();
+                        LBL_resultados.Text = "Data com incremento:\n" + datainc.ToShortDateString();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Insira valores nos campos em branco !\nMesmo que sejam 0\n", "Campo invalido",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Warning);
+                    }
+                        
                 }
                 else
                     MessageBox.Show("Data Invalida !\n" + TXT_dataA.Text, "Data Invalida",
