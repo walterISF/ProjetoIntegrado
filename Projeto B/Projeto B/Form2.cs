@@ -213,6 +213,7 @@ namespace Projeto_B
 
         private void TXT_dias_TextChanged(object sender, EventArgs e)
         {
+            LBL_resultados.Text = "";
             resultadosAux = "\nDias: " + TXT_dias.Text;
             LBL_entradas.Text = resultados + resultadosAux;
         }
@@ -224,6 +225,7 @@ namespace Projeto_B
 
         private void TXT_semanas_TextChanged(object sender, EventArgs e)
         {
+            LBL_resultados.Text = "";
             resultadosAux2 = "\nSemanas: " + TXT_semanas.Text;
             LBL_entradas.Text = resultados + resultadosAux + resultadosAux2;
         }
@@ -235,14 +237,13 @@ namespace Projeto_B
 
         private void TXT_meses_TextChanged(object sender, EventArgs e)
         {
+            LBL_resultados.Text = "";
             resultadosAux3 = "\nMeses: " + TXT_meses.Text;
             LBL_entradas.Text = resultados + resultadosAux + resultadosAux2 + resultadosAux3;
         }
 
         private void BTN_validar_Click(object sender, EventArgs e)
         {
-
-
             if (RBTN_calculo.Checked == true)
             {
                 DateTime datacalculo;
