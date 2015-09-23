@@ -119,11 +119,11 @@
             this.label3.Cursor = System.Windows.Forms.Cursors.Default;
             this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(563, 560);
+            this.label3.Location = new System.Drawing.Point(531, 560);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(307, 23);
+            this.label3.Size = new System.Drawing.Size(351, 23);
             this.label3.TabIndex = 10;
-            this.label3.Text = "copyright Todos os direitos reservados.";
+            this.label3.Text = "copyright 2015 Todos os direitos reservados.";
             // 
             // FormPrincipal
             // 

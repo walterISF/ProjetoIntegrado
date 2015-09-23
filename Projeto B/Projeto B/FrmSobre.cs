@@ -21,7 +21,7 @@ namespace Projeto_B
         {
 
             label1.Text = "Objetivos: Desenvolver um software de cadastro, cuja finalidade" +
-            "é oferecer ao usuário um ambiente agradável e simples de uso.\n\n" +
+            " é oferecer ao usuário um ambiente agradável e simples de uso.\n\n" +
             "Funcionalidade:Calculadora de datas.\n\n" +
             "Desenvolvedores: Allan Guerra, Walter Inácio.\n\n" +
             "Plataforma: Visual Studio C#.\n\n" +
