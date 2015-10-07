@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Projeto_B
 {
-    public partial class Form2 : Form
+    public partial class FrmCalc : Form
     {
         DateTime datasistema = System.DateTime.Now;
         TimeSpan ts;
@@ -19,7 +19,7 @@ namespace Projeto_B
         string resultadosAux2 = "";
         string resultadosAux3 = "";
         int anos, meses, semanas, dias, horas;
-        public Form2()
+        public FrmCalc()
         {
             InitializeComponent();
         }

@@ -16,5 +16,21 @@ namespace Projeto_B
         {
             InitializeComponent();
         }
+
+        private void BTN_cancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BTN_login_Click(object sender, EventArgs e)
+        {
+            //Variaveis para teste
+
+
+            //Variaveis reais
+            if(TXT_usuario.Text == "")
+                MessageBox.Show("Usuária não digitado!", "Erro")
+                
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Projeto_B
 {
-    partial class Form2
+    partial class FrmCalc
     {
         /// <summary>
         /// Required designer variable.
