@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Projeto_B
 {
-    public partial class FormPrincipal : Form
+    public partial class FrmInicio : Form
     {
         
-        public FormPrincipal()
+        public FrmInicio()
         {
             InitializeComponent();
         }
