@@ -39,17 +39,36 @@ namespace Projeto_B
 
             for (i = 0; i<3; i++)
                 if (TXT_usuario.Text == usuario_teste[i])
-                    aux_indice = i;             
+                    aux_indice = i;            
             if(aux_indice == -1)
-                //Mudar borda da TXT_usuario e colocar uma label embaixo da TXT_usuario com a menssagem invalida
-                else
-                    if (TXT_senha.Text == senha_teste[aux_indice])
-                    {
-                        FrmPrincipal principal = new FrmPrincipal();
-                        principal.Show();
-                    }
-                    else
+            {
+                float ESPESSURA = 2.0f;
+                Color COR = Color.Red;
+                TXT_usuario.BorderStyle = BorderStyle.None;
+                Graphics g = this.CreateGraphics();
+                g.DrawRectangle(new Pen(COR, ESPESSURA), TXT_usuario.Location.X, TXT_usuario.Location.Y, TXT_usuario.Width, TXT_usuario.Height);
+                LBL_usuario.Text = "Usuario Invalido";
+            }
+            else
+            {
+               if (TXT_senha.Text == senha_teste[aux_indice])
+               {
+                   FrmPrincipal principal = new FrmPrincipal();
+                   principal.Show();
+               }
+               else
+               {
+                   float ESPESSURA = 2.0f;
+                   Color COR = Color.Red;
+                   TXT_senha.BorderStyle = BorderStyle.None;
+                   Graphics g = this.CreateGraphics();
+                   g.DrawRectangle(new Pen(COR, ESPESSURA), TXT_senha.Location.X, TXT_senha.Location.Y, TXT_senha.Width, TXT_senha.Height);
+                   LBL_senha.Text = "Senha Invalida";
+               }
+               
                     //Mudar borda da TXT_senha e colocar uma label embaixo da TXT_senho com a menssagem invalida
-        }
+        
+            }
+            }
     }
 }
