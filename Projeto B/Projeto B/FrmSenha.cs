@@ -68,17 +68,17 @@ namespace Projeto_B
                     }
                     else
                     {
-                        for (j = 0; j < qtdDigitos -2; j++)
-                        {
-                            if (char.Equals(senha[i], senha[i + 1]) && char.Equals(senha[i + 1], senha[i + 2]))
-                            {
-                                TXT_nsenha.Text = "";
-                                LBL_mensagem.Text = "Não é permitido 3 digitos iguais!";
-                                TXT_nsenha.Focus();
-                                break;
-                            }
-                            else
-                            {
+                        //for (j = 0; j < qtdDigitos -2; j++)
+                        //{
+                         //   if (char.Equals(senha[i], senha[i + 1]) && char.Equals(senha[i + 1], senha[i + 2]))
+                           // {
+                             //   TXT_nsenha.Text = "";
+                               // LBL_mensagem.Text = "Não é permitido 3 digitos iguais!";
+                                //TXT_nsenha.Focus();
+                                //break;
+                            //}
+                            //else
+                            //{
 
 
                                 if (char.IsLetter(senha[i]))
@@ -89,8 +89,8 @@ namespace Projeto_B
                                 {
                                     qtdNumeros++;
                                 }
-                            }
-                        }
+                            //}
+                       // }
 
                         if (qtdNumeros < 2 || qtdLetas < 2)
                         {
@@ -99,13 +99,13 @@ namespace Projeto_B
                             TXT_nsenha.Focus();
                         }
                     }
-
-                }
-
-            
+                }            
             }
+        }
 
-
+        private void BTN_cancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
