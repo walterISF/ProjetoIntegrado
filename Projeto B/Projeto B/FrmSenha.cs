@@ -11,7 +11,19 @@ using System.Windows.Forms;
 namespace Projeto_B
 {
     public partial class FrmSenha : Form
-    {
+    {        
+        //Variaveis para teste
+
+            int ind = -1;
+            string[] usuario_teste = new string[3]{
+            "Padrao111",
+            "Padrao222",
+            "Padrao333"};
+            string[] senha_teste = new string[3]{
+            "Pdr111",
+            "Pdr222",
+            "Pdr333"};
+
         public FrmSenha()
         {
             InitializeComponent();
@@ -27,15 +39,40 @@ namespace Projeto_B
             LBL_mensagem.Text = "";
         }
 
+        private void TXT_usuario_Leave(object sender, EventArgs e)
+        {
+            //Variaveis reais
+            int i;
+
+            for (i = 0; i < 3; i++)
+            {
+                if(TXT_usuario.Text == usuario_teste[i])
+                {
+                    ind = i;
+                }                
+            }
+        }
+
         private void BTN_salvar_Click(object sender, EventArgs e)
         {
-           
-
+            if(ind!=-1)
+            {
+                if(TXT_senha.Text == senha_teste[ind])
+                {
+                    if(TXT_nsenha.Text == TXT_rnsenha.Text)
+                    {
+                       senha_teste[ind] = TXT_nsenha.Text;
+                       MessageBox.Show("Senha alterada com sucesso!","Senha alterada",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
 
         private void TXT_nsenha_Leave(object sender, EventArgs e)
         {
-            if(TXT_nsenha.Text == TXT_senha.Text || TXT_nsenha.Text == LBL_codigo.Text)
+            if(TXT_nsenha.Text == TXT_senha.Text || TXT_nsenha.Text == TXT_usuario.Text)
             {
                 TXT_nsenha.Text = "";
                 MessageBox.Show("Digite uma senha diferente da atual", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);

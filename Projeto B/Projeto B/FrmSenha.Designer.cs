@@ -43,8 +43,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.BTN_cancelar = new System.Windows.Forms.Button();
-            this.LBL_codigo = new System.Windows.Forms.Label();
             this.LBL_mensagem = new System.Windows.Forms.Label();
+            this.TXT_usuario = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // BTN_salvar
@@ -220,18 +220,6 @@
             this.BTN_cancelar.UseVisualStyleBackColor = true;
             this.BTN_cancelar.Click += new System.EventHandler(this.BTN_cancelar_Click);
             // 
-            // LBL_codigo
-            // 
-            this.LBL_codigo.AutoSize = true;
-            this.LBL_codigo.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_codigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.LBL_codigo.Location = new System.Drawing.Point(117, 27);
-            this.LBL_codigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LBL_codigo.Name = "LBL_codigo";
-            this.LBL_codigo.Size = new System.Drawing.Size(66, 23);
-            this.LBL_codigo.TabIndex = 22;
-            this.LBL_codigo.Text = "label10";
-            // 
             // LBL_mensagem
             // 
             this.LBL_mensagem.AutoSize = true;
@@ -243,13 +231,24 @@
             this.LBL_mensagem.Size = new System.Drawing.Size(0, 18);
             this.LBL_mensagem.TabIndex = 23;
             // 
+            // TXT_usuario
+            // 
+            this.TXT_usuario.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXT_usuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.TXT_usuario.Location = new System.Drawing.Point(122, 21);
+            this.TXT_usuario.Margin = new System.Windows.Forms.Padding(4);
+            this.TXT_usuario.Name = "TXT_usuario";
+            this.TXT_usuario.Size = new System.Drawing.Size(231, 29);
+            this.TXT_usuario.TabIndex = 24;
+            this.TXT_usuario.Leave += new System.EventHandler(this.TXT_usuario_Leave);
+            // 
             // FrmSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(406, 376);
+            this.Controls.Add(this.TXT_usuario);
             this.Controls.Add(this.LBL_mensagem);
-            this.Controls.Add(this.LBL_codigo);
             this.Controls.Add(this.BTN_cancelar);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label6);
@@ -293,7 +292,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button BTN_cancelar;
-        private System.Windows.Forms.Label LBL_codigo;
         private System.Windows.Forms.Label LBL_mensagem;
+        private System.Windows.Forms.TextBox TXT_usuario;
     }
 }
