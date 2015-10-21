@@ -12,6 +12,9 @@ namespace Projeto_B
 {
     public partial class FrmLogin : Form
     {
+        usuarioLogado usrLogado = new usuarioLogado();
+        usuarios usuario = new usuarios();
+
         public FrmLogin()
         {
             InitializeComponent();
@@ -25,22 +28,13 @@ namespace Projeto_B
         private void BTN_login_Click(object sender, EventArgs e)
         {
             //Variaveis para teste
-            string[] usuario_teste = new string[3];
-                usuario_teste[0] = "Padrao111";
-                usuario_teste[1] = "Padrao222";
-                usuario_teste[2] = "Padrao333";
-            string[] senha_teste = new string[3];
-                senha_teste[0] = "Pdr111";
-                senha_teste[1] = "Pdr222";
-                senha_teste[2] = "Pdr333";
+            
 
             //Variaveis reais
-            int i, aux_indice = -1;
+            int usr;
 
-            for (i = 0; i<3; i++)
-                if (TXT_usuario.Text == usuario_teste[i])
-                    aux_indice = i;            
-            if(aux_indice == -1)
+            usr = usuario.findLogin(TXT_usuario.Text);            
+            if(usr == -1)
             {
                 float ESPESSURA = 2.0f;
                 Color COR = Color.Red;
@@ -51,9 +45,11 @@ namespace Projeto_B
             }
             else
             {
-               if (TXT_senha.Text == senha_teste[aux_indice])
+               if (TXT_senha.Text == usuario.findPassword(usr))
                {
                    FrmPrincipal principal = new FrmPrincipal();
+                   usrLogado.setLogin(TXT_usuario.Text);
+                   usrLogado.setPassword(TXT_senha.Text);
                    principal.Show();
                }
                else
@@ -65,10 +61,7 @@ namespace Projeto_B
                    g.DrawRectangle(new Pen(COR, ESPESSURA), TXT_senha.Location.X, TXT_senha.Location.Y, TXT_senha.Width, TXT_senha.Height);
                    LBL_senha.Text = "Senha Invalida";
                }
-               
-                    //Mudar borda da TXT_senha e colocar uma label embaixo da TXT_senho com a menssagem invalida
-        
             }
-            }
+        }
     }
 }

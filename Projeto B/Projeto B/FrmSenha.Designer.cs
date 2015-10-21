@@ -44,7 +44,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.BTN_cancelar = new System.Windows.Forms.Button();
             this.LBL_mensagem = new System.Windows.Forms.Label();
-            this.TXT_usuario = new System.Windows.Forms.TextBox();
+            this.LBL_usuario = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BTN_salvar
@@ -52,7 +52,7 @@
             this.BTN_salvar.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_salvar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.BTN_salvar.Location = new System.Drawing.Point(76, 327);
-            this.BTN_salvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_salvar.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_salvar.Name = "BTN_salvar";
             this.BTN_salvar.Size = new System.Drawing.Size(107, 36);
             this.BTN_salvar.TabIndex = 0;
@@ -65,7 +65,7 @@
             this.TXT_senha.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXT_senha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.TXT_senha.Location = new System.Drawing.Point(43, 106);
-            this.TXT_senha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXT_senha.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_senha.Name = "TXT_senha";
             this.TXT_senha.Size = new System.Drawing.Size(132, 29);
             this.TXT_senha.TabIndex = 2;
@@ -75,7 +75,7 @@
             this.TXT_nsenha.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXT_nsenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.TXT_nsenha.Location = new System.Drawing.Point(43, 170);
-            this.TXT_nsenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXT_nsenha.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_nsenha.Name = "TXT_nsenha";
             this.TXT_nsenha.Size = new System.Drawing.Size(132, 29);
             this.TXT_nsenha.TabIndex = 3;
@@ -87,7 +87,7 @@
             this.TXT_rnsenha.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXT_rnsenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.TXT_rnsenha.Location = new System.Drawing.Point(221, 170);
-            this.TXT_rnsenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXT_rnsenha.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_rnsenha.Name = "TXT_rnsenha";
             this.TXT_rnsenha.Size = new System.Drawing.Size(132, 29);
             this.TXT_rnsenha.TabIndex = 4;
@@ -212,7 +212,7 @@
             this.BTN_cancelar.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_cancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.BTN_cancelar.Location = new System.Drawing.Point(221, 327);
-            this.BTN_cancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_cancelar.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_cancelar.Name = "BTN_cancelar";
             this.BTN_cancelar.Size = new System.Drawing.Size(107, 36);
             this.BTN_cancelar.TabIndex = 21;
@@ -231,23 +231,24 @@
             this.LBL_mensagem.Size = new System.Drawing.Size(0, 18);
             this.LBL_mensagem.TabIndex = 23;
             // 
-            // TXT_usuario
+            // LBL_usuario
             // 
-            this.TXT_usuario.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXT_usuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.TXT_usuario.Location = new System.Drawing.Point(122, 21);
-            this.TXT_usuario.Margin = new System.Windows.Forms.Padding(4);
-            this.TXT_usuario.Name = "TXT_usuario";
-            this.TXT_usuario.Size = new System.Drawing.Size(231, 29);
-            this.TXT_usuario.TabIndex = 24;
-            this.TXT_usuario.Leave += new System.EventHandler(this.TXT_usuario_Leave);
+            this.LBL_usuario.AutoSize = true;
+            this.LBL_usuario.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_usuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.LBL_usuario.Location = new System.Drawing.Point(122, 27);
+            this.LBL_usuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBL_usuario.Name = "LBL_usuario";
+            this.LBL_usuario.Size = new System.Drawing.Size(75, 23);
+            this.LBL_usuario.TabIndex = 25;
+            this.LBL_usuario.Text = "Usuário:";
             // 
             // FrmSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(406, 376);
-            this.Controls.Add(this.TXT_usuario);
+            this.Controls.Add(this.LBL_usuario);
             this.Controls.Add(this.LBL_mensagem);
             this.Controls.Add(this.BTN_cancelar);
             this.Controls.Add(this.label9);
@@ -265,7 +266,7 @@
             this.Controls.Add(this.TXT_senha);
             this.Controls.Add(this.BTN_salvar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmSenha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmSenha";
@@ -293,6 +294,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button BTN_cancelar;
         private System.Windows.Forms.Label LBL_mensagem;
-        private System.Windows.Forms.TextBox TXT_usuario;
+        private System.Windows.Forms.Label LBL_usuario;
     }
 }

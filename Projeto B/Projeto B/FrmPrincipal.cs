@@ -16,5 +16,11 @@ namespace Projeto_B
         {
             InitializeComponent();
         }
+
+        private void alterarSenhaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmSenha formSenha = new FrmSenha();
+            formSenha.ShowDialog();
+        }
     }
 }
