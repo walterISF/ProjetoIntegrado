@@ -10,6 +10,8 @@ namespace Projeto_B
     {
         static string usuario;
         static string senha;
+        static string nome;
+        static string nascimento;
 
         public void setLogin(string usr)
         {
@@ -19,6 +21,15 @@ namespace Projeto_B
         {
             senha = psd;
         }
+        public void setName(string name)
+        {
+            nome = name;
+        }
+        public void setBirth(string birth)
+        {
+            nascimento = birth;
+        }
+        //-------------------------------------------------------------
         public string getLogin()
         {
             return usuario;
@@ -26,6 +37,14 @@ namespace Projeto_B
         public string getPassword()
         {
             return senha;
+        }
+        public string getName()
+        {
+            return nome;
+        }
+        public string getBirth()
+        {
+            return nascimento;
         }
     }
 }

@@ -84,6 +84,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="usuarioLogado.cs" />
     <Compile Include="usuarios.cs" />
+    <Compile Include="verificaForca.cs" />
+    <Compile Include="verificaSenha.cs" />
     <EmbeddedResource Include="FrmInicio.resx">
       <DependentUpon>FrmInicio.cs</DependentUpon>
     </EmbeddedResource>

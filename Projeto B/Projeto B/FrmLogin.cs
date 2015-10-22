@@ -27,12 +27,8 @@ namespace Projeto_B
 
         private void BTN_login_Click(object sender, EventArgs e)
         {
-            //Variaveis para teste
-            
-
-            //Variaveis reais
             int usr;
-
+            string aux;
             usr = usuario.findLogin(TXT_usuario.Text);            
             if(usr == -1)
             {
@@ -50,6 +46,11 @@ namespace Projeto_B
                    FrmPrincipal principal = new FrmPrincipal();
                    usrLogado.setLogin(TXT_usuario.Text);
                    usrLogado.setPassword(TXT_senha.Text);
+                   aux = usuario.findName(usr);
+                   usrLogado.setName(aux);
+                   aux = usuario.findBirth(usr);
+                   usrLogado.setBirth(aux);
+
                    principal.Show();
                }
                else

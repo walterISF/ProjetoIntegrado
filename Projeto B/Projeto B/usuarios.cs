@@ -10,15 +10,26 @@ namespace Projeto_B
     {
         //Variaveis para teste
 
-            int ind = -1;
-            static string[] usuario_teste = new string[3]{
-            "Padrao111",
-            "Padrao222",
-            "Padrao333"};
-            static string[] senha_teste = new string[3]{
-            "Pdr111",
-            "Pdr222",
-            "Pdr333"};
+        int ind = -1;
+        static string[] usuario_teste = new string[3]{
+        "Padrao111",
+        "Padrao222",
+        "Padrao333"};
+        static string[] senha_teste = new string[3]{
+        "Pdr111",
+        "Pdr222",
+        "Pdr333"};
+        static string[] nome_teste = new string[3]{
+        "Allan Guerra",
+        "Walter Inacio Silva Filho",
+        "Bianca Amarante Magalhaes"
+        };
+        static string[] nascimento_teste = new string[3]{
+        "06/04/1990",
+        "15/08/1994",
+        "19/08/1982"
+        };
+            
 
         public string findPassword(int i)
         {
@@ -42,6 +53,14 @@ namespace Projeto_B
             }
             else
                 return i;
+        }
+        public string findName(int i)
+        {
+            return nome_teste[i];
+        }
+        public string findBirth(int i)
+        {
+            return nascimento_teste[i];
         }
         public void changePassword(int i, string newPassword)
         {

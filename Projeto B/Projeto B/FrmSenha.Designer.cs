@@ -45,6 +45,7 @@
             this.BTN_cancelar = new System.Windows.Forms.Button();
             this.LBL_mensagem = new System.Windows.Forms.Label();
             this.LBL_usuario = new System.Windows.Forms.Label();
+            this.LBL_forca = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BTN_salvar
@@ -67,8 +68,10 @@
             this.TXT_senha.Location = new System.Drawing.Point(43, 106);
             this.TXT_senha.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_senha.Name = "TXT_senha";
+            this.TXT_senha.PasswordChar = '●';
             this.TXT_senha.Size = new System.Drawing.Size(132, 29);
             this.TXT_senha.TabIndex = 2;
+            this.TXT_senha.UseSystemPasswordChar = true;
             // 
             // TXT_nsenha
             // 
@@ -77,8 +80,10 @@
             this.TXT_nsenha.Location = new System.Drawing.Point(43, 170);
             this.TXT_nsenha.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_nsenha.Name = "TXT_nsenha";
+            this.TXT_nsenha.PasswordChar = '●';
             this.TXT_nsenha.Size = new System.Drawing.Size(132, 29);
             this.TXT_nsenha.TabIndex = 3;
+            this.TXT_nsenha.UseSystemPasswordChar = true;
             this.TXT_nsenha.TextChanged += new System.EventHandler(this.TXT_nsenha_TextChanged);
             this.TXT_nsenha.Leave += new System.EventHandler(this.TXT_nsenha_Leave);
             // 
@@ -89,12 +94,14 @@
             this.TXT_rnsenha.Location = new System.Drawing.Point(221, 170);
             this.TXT_rnsenha.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_rnsenha.Name = "TXT_rnsenha";
+            this.TXT_rnsenha.PasswordChar = '●';
             this.TXT_rnsenha.Size = new System.Drawing.Size(132, 29);
             this.TXT_rnsenha.TabIndex = 4;
+            this.TXT_rnsenha.UseSystemPasswordChar = true;
             // 
             // LBL_n1
             // 
-            this.LBL_n1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LBL_n1.BackColor = System.Drawing.Color.Red;
             this.LBL_n1.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_n1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.LBL_n1.Location = new System.Drawing.Point(43, 260);
@@ -102,10 +109,11 @@
             this.LBL_n1.Name = "LBL_n1";
             this.LBL_n1.Size = new System.Drawing.Size(61, 20);
             this.LBL_n1.TabIndex = 5;
+            this.LBL_n1.Visible = false;
             // 
             // LBL_n2
             // 
-            this.LBL_n2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LBL_n2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.LBL_n2.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_n2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.LBL_n2.Location = new System.Drawing.Point(105, 260);
@@ -113,10 +121,11 @@
             this.LBL_n2.Name = "LBL_n2";
             this.LBL_n2.Size = new System.Drawing.Size(61, 20);
             this.LBL_n2.TabIndex = 12;
+            this.LBL_n2.Visible = false;
             // 
             // LBL_n4
             // 
-            this.LBL_n4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LBL_n4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.LBL_n4.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_n4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.LBL_n4.Location = new System.Drawing.Point(231, 260);
@@ -124,10 +133,11 @@
             this.LBL_n4.Name = "LBL_n4";
             this.LBL_n4.Size = new System.Drawing.Size(61, 20);
             this.LBL_n4.TabIndex = 14;
+            this.LBL_n4.Visible = false;
             // 
             // LBL_n3
             // 
-            this.LBL_n3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LBL_n3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.LBL_n3.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_n3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.LBL_n3.Location = new System.Drawing.Point(168, 260);
@@ -135,10 +145,11 @@
             this.LBL_n3.Name = "LBL_n3";
             this.LBL_n3.Size = new System.Drawing.Size(61, 20);
             this.LBL_n3.TabIndex = 13;
+            this.LBL_n3.Visible = false;
             // 
             // LBL_n5
             // 
-            this.LBL_n5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LBL_n5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.LBL_n5.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_n5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.LBL_n5.Location = new System.Drawing.Point(293, 260);
@@ -146,6 +157,7 @@
             this.LBL_n5.Name = "LBL_n5";
             this.LBL_n5.Size = new System.Drawing.Size(61, 20);
             this.LBL_n5.TabIndex = 15;
+            this.LBL_n5.Visible = false;
             // 
             // label1
             // 
@@ -243,11 +255,23 @@
             this.LBL_usuario.TabIndex = 25;
             this.LBL_usuario.Text = "Usuário:";
             // 
+            // LBL_forca
+            // 
+            this.LBL_forca.AutoSize = true;
+            this.LBL_forca.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_forca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.LBL_forca.Location = new System.Drawing.Point(45, 282);
+            this.LBL_forca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBL_forca.Name = "LBL_forca";
+            this.LBL_forca.Size = new System.Drawing.Size(0, 18);
+            this.LBL_forca.TabIndex = 26;
+            // 
             // FrmSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(406, 376);
+            this.Controls.Add(this.LBL_forca);
             this.Controls.Add(this.LBL_usuario);
             this.Controls.Add(this.LBL_mensagem);
             this.Controls.Add(this.BTN_cancelar);
@@ -295,5 +319,6 @@
         private System.Windows.Forms.Button BTN_cancelar;
         private System.Windows.Forms.Label LBL_mensagem;
         private System.Windows.Forms.Label LBL_usuario;
+        private System.Windows.Forms.Label LBL_forca;
     }
 }
