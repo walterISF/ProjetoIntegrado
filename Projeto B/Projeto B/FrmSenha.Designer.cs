@@ -113,7 +113,7 @@
             // 
             // LBL_n2
             // 
-            this.LBL_n2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.LBL_n2.BackColor = System.Drawing.Color.Orange;
             this.LBL_n2.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_n2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.LBL_n2.Location = new System.Drawing.Point(105, 260);
@@ -125,7 +125,7 @@
             // 
             // LBL_n4
             // 
-            this.LBL_n4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.LBL_n4.BackColor = System.Drawing.Color.Green;
             this.LBL_n4.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_n4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.LBL_n4.Location = new System.Drawing.Point(231, 260);
@@ -137,7 +137,7 @@
             // 
             // LBL_n3
             // 
-            this.LBL_n3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.LBL_n3.BackColor = System.Drawing.Color.Yellow;
             this.LBL_n3.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_n3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.LBL_n3.Location = new System.Drawing.Point(168, 260);
@@ -149,7 +149,7 @@
             // 
             // LBL_n5
             // 
-            this.LBL_n5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.LBL_n5.BackColor = System.Drawing.Color.Blue;
             this.LBL_n5.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_n5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.LBL_n5.Location = new System.Drawing.Point(293, 260);
@@ -251,9 +251,8 @@
             this.LBL_usuario.Location = new System.Drawing.Point(122, 27);
             this.LBL_usuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBL_usuario.Name = "LBL_usuario";
-            this.LBL_usuario.Size = new System.Drawing.Size(75, 23);
+            this.LBL_usuario.Size = new System.Drawing.Size(0, 23);
             this.LBL_usuario.TabIndex = 25;
-            this.LBL_usuario.Text = "Usuário:";
             // 
             // LBL_forca
             // 

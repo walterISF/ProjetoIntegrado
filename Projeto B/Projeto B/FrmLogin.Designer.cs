@@ -44,7 +44,7 @@
             this.BTN_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.BTN_login.Location = new System.Drawing.Point(16, 146);
-            this.BTN_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_login.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_login.Name = "BTN_login";
             this.BTN_login.Size = new System.Drawing.Size(127, 34);
             this.BTN_login.TabIndex = 0;
@@ -67,7 +67,7 @@
             // TXT_usuario
             // 
             this.TXT_usuario.Location = new System.Drawing.Point(129, 28);
-            this.TXT_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXT_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_usuario.Multiline = true;
             this.TXT_usuario.Name = "TXT_usuario";
             this.TXT_usuario.Size = new System.Drawing.Size(187, 34);
@@ -88,7 +88,7 @@
             // TXT_senha
             // 
             this.TXT_senha.Location = new System.Drawing.Point(129, 85);
-            this.TXT_senha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXT_senha.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_senha.Multiline = true;
             this.TXT_senha.Name = "TXT_senha";
             this.TXT_senha.PasswordChar = '●';
@@ -101,7 +101,7 @@
             this.BTN_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_cancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.BTN_cancelar.Location = new System.Drawing.Point(177, 146);
-            this.BTN_cancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_cancelar.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_cancelar.Name = "BTN_cancelar";
             this.BTN_cancelar.Size = new System.Drawing.Size(127, 34);
             this.BTN_cancelar.TabIndex = 0;
@@ -129,6 +129,7 @@
             // 
             // FrmLogin
             // 
+            this.AcceptButton = this.BTN_login;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(337, 196);
@@ -142,7 +143,7 @@
             this.Controls.Add(this.BTN_login);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmLogin";

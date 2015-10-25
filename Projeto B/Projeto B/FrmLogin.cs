@@ -29,14 +29,11 @@ namespace Projeto_B
         {
             int usr;
             string aux;
+            LBL_usuario.Text = "";
+            LBL_senha.Text = "";
             usr = usuario.findLogin(TXT_usuario.Text);            
             if(usr == -1)
             {
-                float ESPESSURA = 2.0f;
-                Color COR = Color.Red;
-                TXT_usuario.BorderStyle = BorderStyle.None;
-                Graphics g = this.CreateGraphics();
-                g.DrawRectangle(new Pen(COR, ESPESSURA), TXT_usuario.Location.X, TXT_usuario.Location.Y, TXT_usuario.Width, TXT_usuario.Height);
                 LBL_usuario.Text = "Usuario Invalido";
             }
             else
@@ -55,11 +52,6 @@ namespace Projeto_B
                }
                else
                {
-                   float ESPESSURA = 2.0f;
-                   Color COR = Color.Red;
-                   TXT_senha.BorderStyle = BorderStyle.None;
-                   Graphics g = this.CreateGraphics();
-                   g.DrawRectangle(new Pen(COR, ESPESSURA), TXT_senha.Location.X, TXT_senha.Location.Y, TXT_senha.Width, TXT_senha.Height);
                    LBL_senha.Text = "Senha Invalida";
                }
             }
