@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Projeto_B
 {
@@ -27,7 +28,30 @@ namespace Projeto_B
             "06/04/1990",
             "15/08/1994",
             "19/08/1982"};
-            
+        //--------------------------------------------------------------
+        public static string local = @"c:/temp/usuarios.txt";
+        StreamWriter gravar = new StreamWriter(local);
+        StreamReader achar = new StreamReader(local);
+
+        public struct usuario
+        {
+            public int codigo;
+            public int status;
+            public int perfil;
+            public string nome;
+            public string nascimento;
+            public string pswAtual;
+            public string pswAnterior;
+            public string pswDataAlteracao;
+        }
+        //CRUD Usuarios
+
+        public void criarUsuario(string usuario)
+        {
+            gravar.WriteLine(usuario);
+        }
+
+        //---------------------------------------------------------------------
 
         public string findPassword(int i)
         {
