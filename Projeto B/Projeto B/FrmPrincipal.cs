@@ -22,5 +22,11 @@ namespace Projeto_B
             FrmSenha formSenha = new FrmSenha();
             formSenha.ShowDialog();
         }
+
+        private void novoUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmNovoUsuario formNovoUsuario = new FrmNovoUsuario();
+            formNovoUsuario.Show();
+        }
     }
 }

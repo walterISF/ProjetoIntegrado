@@ -30,25 +30,17 @@ namespace Projeto_B
             "19/08/1982"};
         //--------------------------------------------------------------
         public static string local = @"c:/temp/usuarios.txt";
-        StreamWriter gravar = new StreamWriter(local);
-        StreamReader achar = new StreamReader(local);
+        
+        //StreamReader achar = new StreamReader(local);
 
-        public struct usuario
-        {
-            public int codigo;
-            public int status;
-            public int perfil;
-            public string nome;
-            public string nascimento;
-            public string pswAtual;
-            public string pswAnterior;
-            public string pswDataAlteracao;
-        }
+        
         //CRUD Usuarios
 
-        public void criarUsuario(string usuario)
+        public void criarUsuario(string user)
         {
-            gravar.WriteLine(usuario);
+            StreamWriter gravar = new StreamWriter(local, true);
+            gravar.WriteLine(user);
+            gravar.Close();
         }
 
         //---------------------------------------------------------------------

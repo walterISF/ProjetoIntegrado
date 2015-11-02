@@ -45,12 +45,12 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(76, 30);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(68, 26);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(75, 26);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(67, 22);
             // 
             // menuStrip1
             // 
@@ -60,7 +60,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(542, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(542, 27);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -71,25 +71,26 @@
             this.alterarSenhaToolStripMenuItem});
             this.usuáriosToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(83, 25);
+            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.usuáriosToolStripMenuItem.Text = "Usuários";
             // 
             // novoUsuárioToolStripMenuItem
             // 
             this.novoUsuárioToolStripMenuItem.Name = "novoUsuárioToolStripMenuItem";
-            this.novoUsuárioToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.novoUsuárioToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.novoUsuárioToolStripMenuItem.Text = "Novo Usuário";
+            this.novoUsuárioToolStripMenuItem.Click += new System.EventHandler(this.novoUsuárioToolStripMenuItem_Click);
             // 
             // alterarSenhaToolStripMenuItem
             // 
             this.alterarSenhaToolStripMenuItem.Name = "alterarSenhaToolStripMenuItem";
-            this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.alterarSenhaToolStripMenuItem.Text = "Alterar Senha";
             this.alterarSenhaToolStripMenuItem.Click += new System.EventHandler(this.alterarSenhaToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(542, 595);
             this.Controls.Add(this.menuStrip1);
