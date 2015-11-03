@@ -35,6 +35,9 @@
             this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcionalidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calculadoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.extraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +59,8 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usuáriosToolStripMenuItem});
+            this.usuáriosToolStripMenuItem,
+            this.funcionalidadesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
@@ -88,6 +92,28 @@
             this.alterarSenhaToolStripMenuItem.Text = "Alterar Senha";
             this.alterarSenhaToolStripMenuItem.Click += new System.EventHandler(this.alterarSenhaToolStripMenuItem_Click);
             // 
+            // funcionalidadesToolStripMenuItem
+            // 
+            this.funcionalidadesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.calculadoraToolStripMenuItem,
+            this.extraToolStripMenuItem});
+            this.funcionalidadesToolStripMenuItem.Name = "funcionalidadesToolStripMenuItem";
+            this.funcionalidadesToolStripMenuItem.Size = new System.Drawing.Size(105, 21);
+            this.funcionalidadesToolStripMenuItem.Text = "Funcionalidades";
+            // 
+            // calculadoraToolStripMenuItem
+            // 
+            this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
+            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.calculadoraToolStripMenuItem.Text = "Calculadora";
+            this.calculadoraToolStripMenuItem.Click += new System.EventHandler(this.calculadoraToolStripMenuItem_Click);
+            // 
+            // extraToolStripMenuItem
+            // 
+            this.extraToolStripMenuItem.Name = "extraToolStripMenuItem";
+            this.extraToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.extraToolStripMenuItem.Text = "Extra";
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -116,5 +142,8 @@
         private System.Windows.Forms.ToolStripMenuItem usuáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem novoUsuárioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alterarSenhaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem funcionalidadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem calculadoraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem extraToolStripMenuItem;
     }
 }
