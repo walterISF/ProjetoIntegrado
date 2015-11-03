@@ -32,7 +32,7 @@ namespace Projeto_B
         private void calculadoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmCalc calculadora = new FrmCalc();
-            calculadora.Show();
+            calculadora.ShowDialog();
         }
     }
 }
