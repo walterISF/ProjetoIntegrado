@@ -444,6 +444,18 @@ namespace Projeto_B
                                                              "Chines: 2022 - ano do Tigre"});
             }
         }
+
+        private void FrmCalc_Load(object sender, EventArgs e)
+        {
+            string usuario = "auxiliar";
+
+            if (usuario == "auxiliar")
+            {
+                RBTN_outros.Enabled = false;
+                RBTN_outros.Visible = false;
+
+            }
+        }
     }
 }
 

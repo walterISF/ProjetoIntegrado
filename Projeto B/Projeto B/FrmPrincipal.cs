@@ -34,5 +34,17 @@ namespace Projeto_B
             FrmCalc calculadora = new FrmCalc();
             calculadora.ShowDialog();
         }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            string usuario = "auxiliar";
+
+            if (usuario == "operador" || usuario == "auxiliar") 
+            {
+                extraToolStripMenuItem.Visible = false;
+
+            }
+
+        }
     }
 }
