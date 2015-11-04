@@ -30,13 +30,6 @@ namespace Projeto_B
                                MessageBoxIcon.Question) == DialogResult.No)
                 e.Cancel = true;
         }
-
-        private void BTN_calc_Click(object sender, EventArgs e)
-        {
-            Form datecalc = new Projeto_B.FrmCalc();
-            datecalc.ShowDialog();
-        }
-
         private void LBL_login_Click(object sender, EventArgs e)
         {
             FrmLogin login = new FrmLogin();

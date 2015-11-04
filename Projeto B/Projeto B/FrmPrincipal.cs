@@ -28,5 +28,11 @@ namespace Projeto_B
             FrmNovoUsuario formNovoUsuario = new FrmNovoUsuario();
             formNovoUsuario.Show();
         }
+
+        private void calculadoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCalc calculadora = new FrmCalc();
+            calculadora.ShowDialog();
+        }
     }
 }
