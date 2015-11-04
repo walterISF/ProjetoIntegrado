@@ -37,9 +37,10 @@ namespace Projeto_B
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            string usuario = "auxiliar";
+            usuarioLogado usuario = new usuarioLogado();
+            int status = usuario.getPerfil();
 
-            if (usuario == "operador" || usuario == "auxiliar") 
+            if (status == 2 || status == 3) 
             {
                 extraToolStripMenuItem.Visible = false;
 

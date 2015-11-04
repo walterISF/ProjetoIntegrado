@@ -447,9 +447,9 @@ namespace Projeto_B
 
         private void FrmCalc_Load(object sender, EventArgs e)
         {
-            string usuario = "auxiliar";
-
-            if (usuario == "auxiliar")
+            usuarioLogado usuario = new usuarioLogado();
+            int status = usuario.getPerfil();
+            if (status == 2 || status == 3)
             {
                 RBTN_outros.Enabled = false;
                 RBTN_outros.Visible = false;
