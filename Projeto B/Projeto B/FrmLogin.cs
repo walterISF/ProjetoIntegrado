@@ -42,6 +42,8 @@ namespace Projeto_B
                 if (TXT_senha.Text == userInfo[5])
                 {
                     FrmPrincipal principal = new FrmPrincipal();
+                    string teste = usuario.lerUltimoUser();
+                    MessageBox.Show(teste);
                     usrLogado.setLogin(int.Parse(userInfo[0]));
                     usrLogado.setStatus(int.Parse(userInfo[1]));
                     usrLogado.setPerfil(int.Parse(userInfo[2]));

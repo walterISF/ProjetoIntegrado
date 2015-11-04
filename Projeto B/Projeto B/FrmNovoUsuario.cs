@@ -35,10 +35,13 @@ namespace Projeto_B
         private void FrmNovoUsuario_Load(object sender, EventArgs e)
         {
             DateTime dataAtual = DateTime.Today;
-            LBL_codUsuario.Text = "900001";
+            string aux = user.lerUltimoUser();
+            string[] usuario = aux.Split(';');
+            int codUser = int.Parse(usuario[0])+1;
+            LBL_codUsuario.Text = codUser.ToString();
             newUser.codigo = int.Parse(LBL_codUsuario.Text);
             newUser.pswAtual = "inicio123";
-            newUser.pswAnterior = "inicial";
+            newUser.pswAnterior = "";
             newUser.pswDataAlteracao = dataAtual.ToString();
             newUser.status = 3;
         }

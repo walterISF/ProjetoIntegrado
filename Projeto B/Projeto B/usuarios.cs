@@ -56,6 +56,14 @@ namespace Projeto_B
             ler.Close();
             return null;
         }
+        public string lerUltimoUser()
+        {
+            StreamReader ler = new StreamReader(local);
+            string aux = ler.ReadToEnd();
+            string[] usuario = aux.Split('\n');
+            ler.Close();
+            return usuario[usuario.Length-2];
+        }
         /*
          * 0 - cod usuario
          * 1 - status
