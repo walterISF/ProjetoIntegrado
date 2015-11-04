@@ -22,7 +22,7 @@ namespace Projeto_B
 
         private void FrmSenha_Load(object sender, EventArgs e)
         {
-            LBL_usuario.Text = usrLogin.getLogin();
+            LBL_usuario.Text = usrLogin.getLogin().ToString();
         }
 
         private void TXT_nsenha_TextChanged(object sender, EventArgs e)

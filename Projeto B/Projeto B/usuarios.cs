@@ -43,14 +43,17 @@ namespace Projeto_B
         {
             StreamReader ler = new StreamReader(local);
             string leitura;
-            while((leitura = ler.ReadLine()) != null){
+            while((leitura = ler.ReadLine()) != ""){
                 string [] user = new string[8];
-                string usuario = ler.ReadLine();
-                user = usuario.Split(';');
+                user = leitura.Split(';');
                 int cod = int.Parse(user[0]);
                 if (cod == codUser)
-                    return usuario;                
+                {
+                    ler.Close();
+                    return leitura;
+                }
             }
+            ler.Close();
             return null;
         }
         /*

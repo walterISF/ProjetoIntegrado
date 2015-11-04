@@ -8,18 +8,20 @@ namespace Projeto_B
 {
     class usuarioLogado
     {
-        static string usuario;
-        static string senha;
-        static string nome;
-        static string nascimento;
+        static int usuario, status, perfil;        
+        static string nome, nascimento, pswAtual, pswAnterior, pswDataAlteracao;        
 
-        public void setLogin(string usr)
+        public void setLogin(int usr)
         {
             usuario = usr;
         }
-        public void setPassword(string psd)
+        public void setStatus(int sts)
         {
-            senha = psd;
+            status = sts;
+        }
+        public void setPerfil(int prf)
+        {
+            perfil = prf;
         }
         public void setName(string name)
         {
@@ -29,14 +31,31 @@ namespace Projeto_B
         {
             nascimento = birth;
         }
+        public void setPswAtual(string psd)
+        {
+            pswAtual = psd;
+        }
+        public void setPswAnterior(string psa)
+        {
+            pswAnterior = psa;
+        }
+        public void setPswData(string psd)
+        {
+            pswDataAlteracao = psd;
+        }       
+        
         //-------------------------------------------------------------
-        public string getLogin()
+        public int getLogin()
         {
             return usuario;
         }
-        public string getPassword()
+        public int getStatus()
         {
-            return senha;
+            return status;
+        }
+        public int getPerfil()
+        {
+            return perfil;
         }
         public string getName()
         {
@@ -45,6 +64,18 @@ namespace Projeto_B
         public string getBirth()
         {
             return nascimento;
+        }
+        public string getPswAtual()
+        {
+            return pswAtual;
+        }
+        public string getPswAnterior()
+        {
+            return pswAnterior;
+        }
+        public string getPswData()
+        {
+            return pswDataAlteracao;
         }
     }
 }

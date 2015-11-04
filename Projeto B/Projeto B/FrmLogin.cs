@@ -27,33 +27,36 @@ namespace Projeto_B
 
         private void BTN_login_Click(object sender, EventArgs e)
         {
-            int usr;
-            string aux;
+            usuarios userLogin = new usuarios();
             LBL_usuario.Text = "";
-            LBL_senha.Text = "";
-            usr = usuario.findLogin(TXT_usuario.Text);            
-            if(usr == -1)
+            LBL_senha.Text = "";           
+            if(userLogin.lerUsuario(int.Parse(TXT_usuario.Text)) == null)
             {
                 LBL_usuario.Text = "Usuario Invalido";
             }
             else
             {
-               if (TXT_senha.Text == usuario.findPassword(usr))
-               {
-                   FrmPrincipal principal = new FrmPrincipal();
-                   usrLogado.setLogin(TXT_usuario.Text);
-                   usrLogado.setPassword(TXT_senha.Text);
-                   aux = usuario.findName(usr);
-                   usrLogado.setName(aux);
-                   aux = usuario.findBirth(usr);
-                   usrLogado.setBirth(aux);
-
-                   principal.Show();
-               }
-               else
-               {
-                   LBL_senha.Text = "Senha Invalida";
-               }
+                string aux = userLogin.lerUsuario(int.Parse(TXT_usuario.Text));
+                string[] userInfo = new string[8];
+                userInfo = aux.Split(';');
+                if (TXT_senha.Text == userInfo[5])
+                {
+                    FrmPrincipal principal = new FrmPrincipal();
+                    usrLogado.setLogin(int.Parse(userInfo[0]));
+                    usrLogado.setStatus(int.Parse(userInfo[1]));
+                    usrLogado.setPerfil(int.Parse(userInfo[2]));
+                    usrLogado.setName(userInfo[3]);                    
+                    usrLogado.setBirth(userInfo[4]);
+                    usrLogado.setPswAtual(userInfo[5]);
+                    usrLogado.setPswAnterior(userInfo[6]);
+                    usrLogado.setPswData(userInfo[7]);
+ 
+                    principal.Show();
+                }
+                else
+                {
+                    LBL_senha.Text = "Senha Invalida";
+                }
             }
         }
     }
