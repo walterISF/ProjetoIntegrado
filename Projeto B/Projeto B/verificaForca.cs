@@ -120,7 +120,7 @@ namespace Projeto_B
         {
             string[] name = nome.Split(' ');
             string ini="";
-            int i, j, aux=0, cont=0, numName = name.Length, num = nsenha.Length;
+            int i, numName = name.Length, num = nsenha.Length;
             for(i=0; i<numName; i++)
             {
                 ini = ini + name[i].Substring(0, 1);
@@ -137,8 +137,8 @@ namespace Projeto_B
         {
             string[] birth = data.Split('/');
             string date = "", inverse = birth[2] + birth[1] + birth[0], inverse2 = "";
-            int i,j,aux=0,cont=0,num=nsenha.Length;
-            int dataCompleta = 8, diaMes = 4;
+            int i,j,num=nsenha.Length;
+            
 
             for(i=0,j=1; i<2; i++,j--)
             {

@@ -31,9 +31,6 @@ namespace Projeto_B
         //--------------------------------------------------------------
         public static string local = @"c:/temp/usuarios.txt";
         
-        //StreamReader achar = new StreamReader(local);
-
-        
         //CRUD Usuarios
 
         public void criarUsuario(string user)
@@ -42,6 +39,30 @@ namespace Projeto_B
             gravar.WriteLine(user);
             gravar.Close();
         }
+        public string lerUsuario(int codUser)
+        {
+            StreamReader ler = new StreamReader(local);
+            string leitura;
+            while((leitura = ler.ReadLine()) != null){
+                string [] user = new string[8];
+                string usuario = ler.ReadLine();
+                user = usuario.Split(';');
+                int cod = int.Parse(user[0]);
+                if (cod == codUser)
+                    return usuario;                
+            }
+            return null;
+        }
+        /*
+         * 0 - cod usuario
+         * 1 - status
+         * 2 - perfil
+         * 3 - nome
+         * 4 - nascimento
+         * 5 - psw atual
+         * 6 - psw anterios
+         * 7 - psw data da alteração
+         */
 
         //---------------------------------------------------------------------
 
