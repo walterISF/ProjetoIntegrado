@@ -16,6 +16,19 @@ namespace Projeto_B
         {
             InitializeComponent();
         }
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            this.Focus();
+            usuarioLogado usuario = new usuarioLogado();
+            int status = usuario.getPerfil();
+
+            if (status == 2 || status == 3)
+            {
+                extraToolStripMenuItem.Visible = false;
+
+            }
+
+        }
 
         private void alterarSenhaToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -33,19 +46,6 @@ namespace Projeto_B
         {
             FrmCalc calculadora = new FrmCalc();
             calculadora.ShowDialog();
-        }
-
-        private void FrmPrincipal_Load(object sender, EventArgs e)
-        {
-            usuarioLogado usuario = new usuarioLogado();
-            int status = usuario.getPerfil();
-
-            if (status == 2 || status == 3) 
-            {
-                extraToolStripMenuItem.Visible = false;
-
-            }
-
         }
     }
 }

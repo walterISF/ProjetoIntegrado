@@ -45,7 +45,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(26, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 18);
+            this.label1.Size = new System.Drawing.Size(156, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Código do Usuário:";
             // 
@@ -54,7 +54,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(121, 87);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 18);
+            this.label2.Size = new System.Drawing.Size(61, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nome:";
             // 
@@ -63,7 +63,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(13, 130);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 18);
+            this.label3.Size = new System.Drawing.Size(169, 23);
             this.label3.TabIndex = 2;
             this.label3.Text = "Data de Nascimento:";
             // 
@@ -72,7 +72,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(40, 178);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 18);
+            this.label4.Size = new System.Drawing.Size(142, 23);
             this.label4.TabIndex = 3;
             this.label4.Text = "Perfil de Usuário:";
             // 
@@ -91,7 +91,7 @@
             this.TXT_nome.Location = new System.Drawing.Point(192, 81);
             this.TXT_nome.MaxLength = 80;
             this.TXT_nome.Name = "TXT_nome";
-            this.TXT_nome.Size = new System.Drawing.Size(316, 25);
+            this.TXT_nome.Size = new System.Drawing.Size(316, 29);
             this.TXT_nome.TabIndex = 5;
             // 
             // TXT_nascimento
@@ -99,7 +99,7 @@
             this.TXT_nascimento.Location = new System.Drawing.Point(192, 127);
             this.TXT_nascimento.Mask = "00/00/0000";
             this.TXT_nascimento.Name = "TXT_nascimento";
-            this.TXT_nascimento.Size = new System.Drawing.Size(100, 25);
+            this.TXT_nascimento.Size = new System.Drawing.Size(100, 29);
             this.TXT_nascimento.TabIndex = 6;
             // 
             // CBOX_perfil
@@ -108,10 +108,11 @@
             this.CBOX_perfil.Items.AddRange(new object[] {
             "1 - Adiministrador",
             "2 - Operador",
-            "3 - Auxiliar"});
+            "3 - Auxiliar",
+            " "});
             this.CBOX_perfil.Location = new System.Drawing.Point(192, 171);
             this.CBOX_perfil.Name = "CBOX_perfil";
-            this.CBOX_perfil.Size = new System.Drawing.Size(204, 25);
+            this.CBOX_perfil.Size = new System.Drawing.Size(204, 30);
             this.CBOX_perfil.TabIndex = 7;
             // 
             // BTN_salvar
@@ -136,7 +137,7 @@
             // 
             // FrmNovoUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(529, 306);
             this.Controls.Add(this.BTN_cancelar);

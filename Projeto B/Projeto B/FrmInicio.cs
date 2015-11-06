@@ -33,7 +33,7 @@ namespace Projeto_B
         private void LBL_login_Click(object sender, EventArgs e)
         {
             FrmLogin login = new FrmLogin();
-            login.ShowDialog();
+            login.Show();
         }
 
         private void LBL_sobre_Click(object sender, EventArgs e)

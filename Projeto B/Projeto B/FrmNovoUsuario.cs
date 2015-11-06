@@ -71,6 +71,17 @@ namespace Projeto_B
                 newUser.perfil = 3;
             string userInfo = newUser.codigo.ToString() + ";" + newUser.status.ToString() + ";" + newUser.perfil.ToString() + ";" + newUser.nome + ";" + newUser.nascimento + ";" + newUser.pswAtual + ";" + newUser.pswAnterior + ";" + newUser.pswDataAlteracao;
             user.criarUsuario(userInfo);
+            MessageBox.Show("Novo Usuario criado com sucesso!\nSenha inicial: inicio123", "Sucesso",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+            string aux = user.lerUltimoUser();
+            string[] usuario = aux.Split(';');
+            int codUser = int.Parse(usuario[0]) + 1;
+            LBL_codUsuario.Text = codUser.ToString();
+            TXT_nome.Text = "";
+            TXT_nascimento.Text = "";
+            CBOX_perfil.SelectedIndex = 3;
+            
         }
     }
 }

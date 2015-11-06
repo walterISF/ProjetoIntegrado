@@ -29,7 +29,7 @@ namespace Projeto_B
         {
             usuarios userLogin = new usuarios();
             LBL_usuario.Text = "";
-            LBL_senha.Text = "";           
+            LBL_senha.Text = "";          
             if(userLogin.lerUsuario(int.Parse(TXT_usuario.Text)) == null)
             {
                 LBL_usuario.Text = "Usuario Invalido";
@@ -54,6 +54,8 @@ namespace Projeto_B
                     usrLogado.setPswData(userInfo[7]);
  
                     principal.Show();
+
+                    this.Close();
                 }
                 else
                 {
