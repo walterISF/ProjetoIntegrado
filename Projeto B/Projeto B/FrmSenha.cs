@@ -35,7 +35,7 @@ namespace Projeto_B
             int usr = usuario.findLogin(LBL_usuario.Text);
             if (TXT_nsenha.Text == TXT_rnsenha.Text)
             {
-                if (TXT_senha.Text == usuario.findPassword(usr))
+                if (TXT_senha.Text == usrLogin.getPswAtual())
                 {
                     usuario.changePassword(usr, TXT_nsenha.Text);
                     MessageBox.Show("Senha alterada com sucesso!", "Senha alterada",
@@ -54,7 +54,7 @@ namespace Projeto_B
             else
                 MessageBox.Show("Nova senha e Repetir nova senha não conferem!", "Erro de validação",
                                     MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);        
+                                    MessageBoxIcon.Error);       
         }
 
         private void TXT_nsenha_Leave(object sender, EventArgs e)
@@ -69,8 +69,7 @@ namespace Projeto_B
             verificaSenha ver = new verificaSenha();
             verificaForca verForca = new verificaForca();
             int forca = 10;
-            int penaliza = 0;
-            int usr = usuario.findLogin(LBL_usuario.Text);
+            int penaliza = 0;            
             string nomeUser = usrLogin.getName();
             string birthUser = usrLogin.getBirth();
             if (TXT_nsenha.Text != "")
@@ -179,15 +178,7 @@ namespace Projeto_B
                                     LBL_n1.Visible = true;
                                     LBL_forca.Text = "Muito Fraca, digite nova senha";
                                     BTN_salvar.Enabled = false;
-                                }
-                       
-                                
-                        
-                        
-                        
-                    
-                    
-                
+                                }            
             }
         }
         private void BTN_cancelar_Click(object sender, EventArgs e)

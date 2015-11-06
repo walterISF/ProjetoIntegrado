@@ -9,27 +9,10 @@ namespace Projeto_B
 {
     class usuarios
     {
-        //Variaveis para teste
-
-        int ind = -1;
-        static string[] usuario_teste = new string[3]{
-            "Padrao111",
-            "Padrao222",
-            "Padrao333"};
-        static string[] senha_teste = new string[3]{
-            "Pdr111",
-            "Pdr222",
-            "Pdr333"};
-        static string[] nome_teste = new string[3]{
-            "Allan Guerra",
-            "Walter Inacio Silva Filho",
-            "Bianca Amarante Magalhaes"};
-        static string[] nascimento_teste = new string[3]{
-            "06/04/1990",
-            "15/08/1994",
-            "19/08/1982"};
+       
         //--------------------------------------------------------------
         public static string local = @"c:/temp/usuarios.txt";
+        public static string arqMorto = @"c:/temp/arqMorto.txt";
         
         //CRUD Usuarios
 
@@ -43,9 +26,9 @@ namespace Projeto_B
         {
             StreamReader ler = new StreamReader(local);
             string leitura;
-            while((leitura = ler.ReadLine()) != ""){
-                string [] user = new string[8];
-                user = leitura.Split(';');
+            while((leitura = ler.ReadLine()) != "")
+            {
+                string [] user = leitura.Split(';');
                 int cod = int.Parse(user[0]);
                 if (cod == codUser)
                 {
@@ -66,46 +49,29 @@ namespace Projeto_B
         }
         /*
          * 0 - cod usuario
-         * 1 - status
-         * 2 - perfil
+         * 1 - status   1-normal 2-bloqueado 3-senha inicial
+         * 2 - perfil   1-administrador 2-operador 3-auxiliar
          * 3 - nome
          * 4 - nascimento
          * 5 - psw atual
-         * 6 - psw anterios
+         * 6 - psw anterior
          * 7 - psw data da alteração
          */
 
         //---------------------------------------------------------------------
 
-        public string findPassword(int i)
+        public void trocarSenha(int codUser, string novaSenha)
         {
-            return senha_teste[i];
+            StreamReader ler = new StreamReader(local);
+            StreamWriter escrever = new StreamWriter(arqMorto);
+            string usuario = lerUsuario(codUser);
+            string[] user = usuario.Split(';');
+            escrever.WriteLine("Alteração de Senha: " + usuario);
+            user[1] = "1";
+            user[6] = user[5];
+            user[5] = novaSenha;
+            string nSenha = user[0] + user[1] + user[2] + user[3] + user[4] + user[5] + user[6] + user[7];
         }
-        public int findLogin(string usr)
-        {
-            int i=0;
-            while ( i < 3)
-            {
-                if (usr == usuario_teste[i])
-                {
-                    return i;
-                }
-                else
-                    i++;
-            }
-            return -1;          
-        }
-        public string findName(int i)
-        {
-            return nome_teste[i];
-        }
-        public string findBirth(int i)
-        {
-            return nascimento_teste[i];
-        }
-        public void changePassword(int i, string newPassword)
-        {
-            senha_teste[i] = newPassword;
-        }
+        
     }
 }

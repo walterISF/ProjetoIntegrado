@@ -16,7 +16,7 @@ namespace Projeto_B
         {
             public int codigo;
             public int status;//1-normal 2-bloqueado 3-senha inicial
-            public int perfil;//1-administrados 2-operador 3-auxiliar
+            public int perfil;//1-administrador 2-operador 3-auxiliar
             public string nome;
             public string nascimento;
             public string pswAtual;

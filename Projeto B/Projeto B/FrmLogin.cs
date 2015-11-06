@@ -42,8 +42,8 @@ namespace Projeto_B
                 if (TXT_senha.Text == userInfo[5])
                 {
                     FrmPrincipal principal = new FrmPrincipal();
-                    string teste = usuario.lerUltimoUser();
-                    MessageBox.Show(teste);
+                    FrmSenha alterarSenha = new FrmSenha();
+                    
                     usrLogado.setLogin(int.Parse(userInfo[0]));
                     usrLogado.setStatus(int.Parse(userInfo[1]));
                     usrLogado.setPerfil(int.Parse(userInfo[2]));
@@ -52,8 +52,11 @@ namespace Projeto_B
                     usrLogado.setPswAtual(userInfo[5]);
                     usrLogado.setPswAnterior(userInfo[6]);
                     usrLogado.setPswData(userInfo[7]);
- 
-                    principal.Show();
+
+                    if (int.Parse(userInfo[1]) == 3)
+                        alterarSenha.ShowDialog();
+                    else
+                        principal.Show();
 
                     this.Close();
                 }
