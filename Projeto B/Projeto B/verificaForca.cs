@@ -13,17 +13,21 @@ namespace Projeto_B
             int i,j,aux,cont=1, num = nsenha.Length, numSeq = seq.Length;
             for(i=0; i<num; i++)
             {
-                if(retornaChar(nsenha,i) == retornaChar(seq,0))
+                if(retornaChar(nsenha, i) == retornaChar(seq, 0))
                 {
                     aux = i+1;
-                    for(j=1; j<numSeq; j++)
                     {
-                        if (retornaChar(nsenha, aux) == retornaChar(seq, j))
+                        for (j = 1; j < numSeq; j++)
                         {
-                            cont++;
-                            aux++;
+                            if (aux < num)
+                            {
+                                if (retornaChar(nsenha, aux) == retornaChar(seq, j))
+                                {
+                                    cont++;
+                                    aux++;
+                                }
+                            }
                         }
-
                     }
                     if (cont == numSeq)
                         return true;
@@ -35,9 +39,7 @@ namespace Projeto_B
         
         private char retornaChar(string senha, int i)
         {
-            int num = senha.Length;
-            char[] pass = new char[num];
-            pass = senha.ToCharArray();
+            char[] pass = senha.ToCharArray();
 
                 return senha[i];
         }
@@ -123,7 +125,8 @@ namespace Projeto_B
             int i, numName = name.Length, num = nsenha.Length;
             for(i=0; i<numName; i++)
             {
-                ini = ini + name[i].Substring(0, 1);
+                if(name[i] != "")
+                    ini = ini + name[i].Substring(0, 1);
             }
             ini = ini.ToLower();
             nsenha = nsenha.ToLower();
@@ -137,7 +140,7 @@ namespace Projeto_B
         {
             string[] birth = data.Split('/');
             string date = "", inverse = birth[2] + birth[1] + birth[0], inverse2 = "";
-            int i,j,num=nsenha.Length;
+            int i, j, num = nsenha.Length;
             
 
             for(i=0,j=1; i<2; i++,j--)

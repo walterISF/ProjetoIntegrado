@@ -47,5 +47,10 @@ namespace Projeto_B
             FrmCalc calculadora = new FrmCalc();
             calculadora.ShowDialog();
         }
+
+        private void logoffToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

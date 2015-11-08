@@ -32,12 +32,11 @@ namespace Projeto_B
 
         private void BTN_salvar_Click(object sender, EventArgs e)
         {
-            int usr = usuario.findLogin(LBL_usuario.Text);
             if (TXT_nsenha.Text == TXT_rnsenha.Text)
             {
                 if (TXT_senha.Text == usrLogin.getPswAtual())
                 {
-                    usuario.changePassword(usr, TXT_nsenha.Text);
+                    usuario.trocarSenha(int.Parse(LBL_usuario.Text), TXT_nsenha.Text);
                     MessageBox.Show("Senha alterada com sucesso!", "Senha alterada",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);

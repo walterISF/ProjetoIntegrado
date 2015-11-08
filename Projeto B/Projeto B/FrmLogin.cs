@@ -19,6 +19,10 @@ namespace Projeto_B
         {
             InitializeComponent();
         }
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+            TXT_senha.Focus();
+        }
 
         private void BTN_cancelar_Click(object sender, EventArgs e)
         {
