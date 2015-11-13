@@ -12,18 +12,6 @@ namespace Projeto_B
 {
     public partial class FrmNovoUsuario : Form
     {
-        public struct usuario
-        {
-            public int codigo;
-            public int status;//1-normal 2-bloqueado 3-senha inicial
-            public int perfil;//1-administrador 2-operador 3-auxiliar
-            public string nome;
-            public string nascimento;
-            public string pswAtual;
-            public string pswAnterior;
-            public string pswDataAlteracao;
-        }
-
         usuarios user = new usuarios();
         usuario newUser;
         
@@ -37,13 +25,13 @@ namespace Projeto_B
             DateTime dataAtual = DateTime.Today;
             string aux = user.lerUltimoUser();
             string[] usuario = aux.Split(';');
-            int codUser = int.Parse(usuario[0])+1;
+            int codUser = 900004;//int.Parse(usuario[0])+1;
             LBL_codUsuario.Text = codUser.ToString();
-            newUser.codigo = int.Parse(LBL_codUsuario.Text);
-            newUser.pswAtual = "inicio123";
-            newUser.pswAnterior = "";
-            newUser.pswDataAlteracao = dataAtual.ToString();
-            newUser.status = 3;
+            newUser.Codigo = int.Parse(LBL_codUsuario.Text);
+            newUser.PswAtual = "inicio123";
+            newUser.PswAnterior = "";
+            newUser.PswDataAlteracao = dataAtual.ToString();
+            newUser.Status = 3;
         }
 
         private void FrmNovoUsuario_FormClosing(object sender, FormClosingEventArgs e)
@@ -61,26 +49,31 @@ namespace Projeto_B
 
         private void BTN_salvar_Click(object sender, EventArgs e)
         {
-            newUser.nome = TXT_nome.Text;
-            newUser.nascimento = TXT_nascimento.Text;
+            newUser.Nome = TXT_nome.Text;
+            newUser.Nascimento = TXT_nascimento.Text;
             if (CBOX_perfil.SelectedIndex == 0)
-                newUser.perfil = 1;
+                newUser.Perfil = 1;
             if (CBOX_perfil.SelectedIndex == 1)
-                newUser.perfil = 2;
+                newUser.Perfil = 2;
             if (CBOX_perfil.SelectedIndex == 2)
-                newUser.perfil = 3;
-            string userInfo = newUser.codigo.ToString() + ";" + newUser.status.ToString() + ";" + newUser.perfil.ToString() + ";" + newUser.nome + ";" + newUser.nascimento + ";" + newUser.pswAtual + ";" + newUser.pswAnterior + ";" + newUser.pswDataAlteracao;
-            user.criarUsuario(userInfo);
+                newUser.Perfil = 3;
+            //string userInfo = newUser.codigo.ToString() + ";" + newUser.status.ToString() + ";" + newUser.perfil.ToString() + ";" + newUser.nome + ";" + newUser.nascimento + ";" + newUser.pswAtual + ";" + newUser.pswAnterior + ";" + newUser.pswDataAlteracao;
+            user.criarUsuario(newUser);
+            
+
             MessageBox.Show("Novo Usuario criado com sucesso!\nSenha inicial: inicio123", "Sucesso",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
-            string aux = user.lerUltimoUser();
+
+            string aux = user.lerTudo();
+            MessageBox.Show(aux);
+           /* string aux = user.lerUltimoUser();
             string[] usuario = aux.Split(';');
             int codUser = int.Parse(usuario[0]) + 1;
             LBL_codUsuario.Text = codUser.ToString();
             TXT_nome.Text = "";
             TXT_nascimento.Text = "";
-            CBOX_perfil.SelectedIndex = 3;
+            CBOX_perfil.SelectedIndex = 3;*/
             
         }
     }
