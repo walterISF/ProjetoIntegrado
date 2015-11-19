@@ -38,6 +38,9 @@ namespace Projeto_B
             else
             {
                 user.bloquearUser(int.Parse(TXT_usuario.Text), "1");
+                MessageBox.Show("Usuario desbloqueado!", "Sucesso",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
             }
         }
     }

@@ -78,5 +78,11 @@ namespace Projeto_B
 
         }
 
+        private void bloquearUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmBloq frmBloquear = new FrmBloq();
+            frmBloquear.Show();
+        }
+
     }
 }
