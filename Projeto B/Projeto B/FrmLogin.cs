@@ -31,15 +31,16 @@ namespace Projeto_B
 
         private void BTN_login_Click(object sender, EventArgs e)
         {
-            if(usuario.lerUsuario(int.Parse(TXT_usuario.Text)) == null)
+            LBL_usuario.Text = "";
+            LBL_senha.Text = "";
+            string aux = usuario.lerUsuario(int.Parse(TXT_usuario.Text));
+            if(aux == "")
             {
                 LBL_usuario.Text = "Usuario Invalido";
-                LBL_usuario.Text = "";
-                LBL_senha.Text = ""; 
+                TXT_usuario.Text = "";
             }
             else
             {
-                string aux = usuario.lerUsuario(int.Parse(TXT_usuario.Text));
                 string[] userInfo = aux.Split(';'); 
                 if (TXT_senha.Text == userInfo[5])
                 {
@@ -47,7 +48,7 @@ namespace Projeto_B
                     FrmSenha alterarSenha = new FrmSenha();
                     DateTime dataAtual = DateTime.Now;
                     DateTime dataAlteracao = Convert.ToDateTime(userInfo[7]);
-                    dataAlteracao.AddDays(90);
+                    dataAlteracao = dataAlteracao.AddDays(90);
                     
                     usrLogado.setLogin(int.Parse(userInfo[0]));
                     usrLogado.setStatus(int.Parse(userInfo[1]));
@@ -72,13 +73,15 @@ namespace Projeto_B
                                     alterarSenha.ShowDialog();
                                 else
                                     principal.Show();
+                            else
+                                principal.Show();
+
                     this.Close();
                 }
                 else
                 {
                     LBL_senha.Text = "Senha Invalida";
-                    LBL_usuario.Text = "";
-                    LBL_senha.Text = ""; 
+                    TXT_senha.Text = "";
                 }                 
             }
         }
