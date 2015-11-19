@@ -104,7 +104,7 @@
             // 
             // CBOX_perfil
             // 
-            this.CBOX_perfil.FormattingEnabled = true;
+            this.CBOX_perfil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBOX_perfil.Items.AddRange(new object[] {
             "1 - Adiministrador",
             "2 - Operador",
