@@ -31,22 +31,23 @@ namespace Projeto_B
 
         private void BTN_login_Click(object sender, EventArgs e)
         {
-            usuarios userLogin = new usuarios();
-            LBL_usuario.Text = "";
-            LBL_senha.Text = "";          
-            if(userLogin.lerUsuario(int.Parse(TXT_usuario.Text)) == null)
+            if(usuario.lerUsuario(int.Parse(TXT_usuario.Text)) == null)
             {
                 LBL_usuario.Text = "Usuario Invalido";
+                LBL_usuario.Text = "";
+                LBL_senha.Text = ""; 
             }
             else
             {
-                string aux = userLogin.lerUsuario(int.Parse(TXT_usuario.Text));
-                string[] userInfo = new string[8];
-                userInfo = aux.Split(';');
+                string aux = usuario.lerUsuario(int.Parse(TXT_usuario.Text));
+                string[] userInfo = aux.Split(';'); 
                 if (TXT_senha.Text == userInfo[5])
                 {
                     FrmPrincipal principal = new FrmPrincipal();
                     FrmSenha alterarSenha = new FrmSenha();
+                    DateTime dataAtual = DateTime.Now;
+                    DateTime dataAlteracao = Convert.ToDateTime(userInfo[7]);
+                    dataAlteracao.AddDays(90);
                     
                     usrLogado.setLogin(int.Parse(userInfo[0]));
                     usrLogado.setStatus(int.Parse(userInfo[1]));
@@ -56,18 +57,29 @@ namespace Projeto_B
                     usrLogado.setPswAtual(userInfo[5]);
                     usrLogado.setPswAnterior(userInfo[6]);
                     usrLogado.setPswData(userInfo[7]);
-
-                    if (int.Parse(userInfo[1]) == 3)
-                        alterarSenha.ShowDialog();
+                    if (int.Parse(userInfo[1]) == 2)
+                        MessageBox.Show("Usuario bloqueado!", "Bloqueado",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
                     else
-                        principal.Show();
-
+                        if (int.Parse(userInfo[1]) == 3)
+                            alterarSenha.ShowDialog();
+                        else
+                            if (dataAlteracao < dataAtual)
+                                if (MessageBox.Show("A senha não é alterada a mais de 90 dias!\nDeseja alterar.", "Alterar senha",
+                                                MessageBoxButtons.YesNo,
+                                                MessageBoxIcon.Question) == DialogResult.Yes)
+                                    alterarSenha.ShowDialog();
+                                else
+                                    principal.Show();
                     this.Close();
                 }
                 else
                 {
                     LBL_senha.Text = "Senha Invalida";
-                }
+                    LBL_usuario.Text = "";
+                    LBL_senha.Text = ""; 
+                }                 
             }
         }
     }

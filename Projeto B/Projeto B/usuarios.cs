@@ -7,81 +7,34 @@ using System.IO;
 
 namespace Projeto_B
 {
-    
-    public struct usuario
+    class usuarios
     {
-        public int codigo;
-        public int status;//1-normal 2-bloqueado 3-senha inicial
-        public int perfil;//1-administrador 2-operador 3-auxiliar
+        public int cod;
+        public int status;
+        public int perfil;
         public string nome;
         public string nascimento;
         public string pswAtual;
         public string pswAnterior;
-        public string pswDataAlteracao;
-
-        public int Codigo
-        {
-            set { codigo = value; }
-            get { return codigo; }
-        }
-        public int Status
-        {
-            set { status = value; }
-            get { return status; }
-        }
-        public int Perfil
-        {
-            set { perfil = value; }
-            get { return perfil; }
-        }
-        public string Nome
-        {
-            set { nome = value; }
-            get { return nome; }
-        }
-        public string Nascimento
-        {
-            set { nascimento = value; }
-            get { return nascimento; }
-        }
-        public string PswAtual
-        {
-            set { pswAtual = value; }
-            get { return pswAtual; }
-        }
-        public string PswAnterior
-        {
-            set { pswAnterior = value; }
-            get { return pswAnterior; }
-        }
-        public string PswDataAlteracao
-        {
-            set { pswDataAlteracao = value; }
-            get { return pswDataAlteracao; }
-        }
-    }
-    
-
-    //------------------------------------------------------------------
-    class usuarios
-    {
+        public string pswAlteracao;       
        
         //--------------------------------------------------------------
-        public static string local = @"c:/temp/usuarios.txt";
-        public static string amUsuario = @"c:/temp/arqMorto.txt";
-        public static string arqTmp = @"c:/temp/arqTmp.txt";
+
+        public static string arqUser = @"arqUser.txt";
+        public static string arqMortoUser = @"arqMortoUser.txt";
+        public static string arqTmp = @"arqTmp.txt";
         
         //CRUD Usuarios
 
-        public void criarUsuario(usuario user)
+        public void criarUsuario(usuarios user)
         {
-            StreamWriter gravar = new StreamWriter(local, true);
-            gravar.WriteLine(user);
+            StreamWriter gravar = new StreamWriter(arqUser, true);
+            gravar.WriteLine(user.cod + ";" + user.status + ";" + user.perfil + ";" + user.nome + ";" + user.nascimento + ";" + user.pswAtual + ";" + user.pswAnterior + ";" + user.pswAlteracao);
             gravar.Close();
         }
         public string lerUsuario(int codUser)
         {
-            StreamReader ler = new StreamReader(local);
+            StreamReader ler = new StreamReader(arqUser);
             string leitura;
             while((leitura = ler.ReadLine()) != null)
             {
@@ -96,20 +49,19 @@ namespace Projeto_B
             ler.Close();
             return null;
         }
-        public string lerUltimoUser()
+        public string lerUltimoUser(int i)
         {
-            StreamReader ler = new StreamReader(local);
+            StreamReader ler = new StreamReader(arqUser);
             string aux = ler.ReadToEnd();
             string[] usuario = aux.Split('\n');
+            string[] user = new string[8];
             ler.Close();
-            return usuario[usuario.Length-2];
-        }
-        public string lerTudo()
-        {
-            StreamReader lertudo = new StreamReader(local);
-            string aux = lertudo.ReadToEnd();
-            return aux;
-        }
+            if(usuario.Length < 2)
+                user = usuario[0].Split(';');
+            else
+                user = usuario[usuario.Length - 2].Split(';');
+            return user[i];
+        }        
         /*
          * 0 - cod usuario
          * 1 - status   1-normal 2-bloqueado 3-senha inicial
@@ -125,8 +77,8 @@ namespace Projeto_B
 
         public void trocarSenha(int codUser, string novaSenha)
         {
-            StreamReader ler = new StreamReader(local);
-            StreamWriter escrever = new StreamWriter(amUsuario);
+            StreamReader ler = new StreamReader(arqUser);
+            StreamWriter escrever = new StreamWriter(arqMortoUser);
             StreamWriter arqTemp = new StreamWriter(arqTmp);
             string usuario = lerUsuario(codUser);
             string[] user = usuario.Split(';');
@@ -153,8 +105,8 @@ namespace Projeto_B
             escrever.Close();
             arqTemp.Close();
 
-            File.Delete(local);
-            File.Copy(arqTmp, local);
+            File.Delete(arqUser);
+            File.Copy(arqTmp, arqUser);
             File.Delete(arqTmp);
         }
         
