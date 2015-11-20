@@ -36,17 +36,28 @@ namespace Projeto_B
             {
                 if (TXT_senha.Text == usrLogin.getPswAtual())
                 {
-                    usuario.trocarSenha(int.Parse(LBL_usuario.Text), TXT_nsenha.Text);
-                    MessageBox.Show("Senha alterada com sucesso!", "Senha alterada",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
-                    this.Close();
+                    if(TXT_nsenha.Text != usrLogin.getPswAnterior())
+                    {
+                        usuario.trocarSenha(int.Parse(LBL_usuario.Text), TXT_nsenha.Text);
+                        MessageBox.Show("Senha alterada com sucesso!", "Senha alterada",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Senha igual a senha anterior!", "Erro de validação",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
+                        TXT_nsenha.Text = "";
+                        TXT_rnsenha.Text = "";
+                    }
                 }
                 else
                 {
                     MessageBox.Show("Senha não confere!", "Erro de validação",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
                     TXT_senha.Text = "";
                 }
             }

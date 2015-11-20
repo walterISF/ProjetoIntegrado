@@ -98,6 +98,7 @@
             // 
             // BTN_cancelar
             // 
+            this.BTN_cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BTN_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_cancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.BTN_cancelar.Location = new System.Drawing.Point(177, 146);
@@ -132,6 +133,7 @@
             this.AcceptButton = this.BTN_login;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.BTN_cancelar;
             this.ClientSize = new System.Drawing.Size(337, 196);
             this.Controls.Add(this.LBL_usuario);
             this.Controls.Add(this.LBL_senha);

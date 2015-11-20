@@ -47,7 +47,7 @@ namespace Projeto_B
                 }
             }
             ler.Close();
-            return null;
+            return "";
         }
         public string lerUltimoUser(int i)
         {
@@ -61,7 +61,50 @@ namespace Projeto_B
             else
                 user = usuario[usuario.Length - 2].Split(';');
             return user[i];
-        }        
+        }  
+        public bool bloquearUser(int codUser, string status)
+        {
+            string user = lerUsuario(codUser);
+            if (user == null)
+                return false;
+            else
+            {
+                StreamReader ler = new StreamReader(arqUser);
+                StreamWriter escrever = new StreamWriter(arqMortoUser, true);
+                StreamWriter arqTemp = new StreamWriter(arqTmp);
+
+                string[] bloq = user.Split(';');
+                if(int.Parse(status) == 1)
+                {
+                    escrever.WriteLine("Desbloqueio de usuario: " + user);
+                    bloq[1] = status;
+                }
+                else
+                {
+                    escrever.WriteLine("Bloqueio de usuario: " + user);
+                    bloq[1] = status;
+                }
+                user = bloq[0] + ";" + bloq[1] + ";" + bloq[2] + ";" + bloq[3] + ";" + bloq[4] + ";" + bloq[5] + ";" + bloq[6] + ";" + bloq[7];
+                string leitura;
+                while ((leitura = ler.ReadLine()) != null)
+                {
+                    bloq = leitura.Split(';');
+                    if (int.Parse(bloq[0]) == codUser)
+                        arqTemp.WriteLine(user);
+                    else
+                        arqTemp.WriteLine(leitura);
+                }
+                ler.Close();
+                escrever.Close();
+                arqTemp.Close();
+
+                File.Delete(arqUser);
+                File.Copy(arqTmp, arqUser);
+                File.Delete(arqTmp);
+
+                return true;
+            }
+        }
         /*
          * 0 - cod usuario
          * 1 - status   1-normal 2-bloqueado 3-senha inicial
@@ -77,8 +120,9 @@ namespace Projeto_B
 
         public void trocarSenha(int codUser, string novaSenha)
         {
+            DateTime data = DateTime.Now;
             StreamReader ler = new StreamReader(arqUser);
-            StreamWriter escrever = new StreamWriter(arqMortoUser);
+            StreamWriter escrever = new StreamWriter(arqMortoUser, true);
             StreamWriter arqTemp = new StreamWriter(arqTmp);
             string usuario = lerUsuario(codUser);
             string[] user = usuario.Split(';');
@@ -86,6 +130,7 @@ namespace Projeto_B
             user[1] = "1";
             user[6] = user[5];
             user[5] = novaSenha;
+            user[7] = data.ToString();
             string nSenha = user[0] + ";" + user[1] + ";" + user[2] + ";" + user[3] + ";" + user[4] + ";" + user[5] + ";" + user[6] + ";" + user[7];
             string leitura;
             while((leitura = ler.ReadLine()) != null)
