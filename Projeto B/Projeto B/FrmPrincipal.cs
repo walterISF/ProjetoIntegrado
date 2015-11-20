@@ -48,35 +48,11 @@ namespace Projeto_B
             calculadora.ShowDialog();
         }
 
-        private void logoffToolStripMenuItem_Click(object sender, EventArgs e)
+        private void BTN_sair_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
 
     }
 }
