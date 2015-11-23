@@ -48,6 +48,7 @@ namespace Projeto_B
             calculadora.ShowDialog();
         }
 
+<<<<<<< HEAD
         private void button4_Click(object sender, EventArgs e)
         {
 
@@ -72,6 +73,13 @@ namespace Projeto_B
         {
 
         }
+=======
+        private void BTN_sair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+>>>>>>> e131734cba59a5e0bca65831f69422b088eef1f8
 
         private void bloquearUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
