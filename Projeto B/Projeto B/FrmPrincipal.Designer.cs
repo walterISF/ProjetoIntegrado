@@ -36,10 +36,10 @@
             this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bloquearUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionalidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculadoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.extraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logoffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BTN_Compra = new System.Windows.Forms.Button();
             this.BTN_addProduto = new System.Windows.Forms.Button();
             this.BTN_addCliente = new System.Windows.Forms.Button();
@@ -57,7 +57,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.bloquearUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -83,8 +82,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuáriosToolStripMenuItem,
-            this.funcionalidadesToolStripMenuItem,
-            this.logoffToolStripMenuItem});
+            this.funcionalidadesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
@@ -117,6 +115,13 @@
             this.alterarSenhaToolStripMenuItem.Text = "Alterar Senha";
             this.alterarSenhaToolStripMenuItem.Click += new System.EventHandler(this.alterarSenhaToolStripMenuItem_Click);
             // 
+            // bloquearUsuárioToolStripMenuItem
+            // 
+            this.bloquearUsuárioToolStripMenuItem.Name = "bloquearUsuárioToolStripMenuItem";
+            this.bloquearUsuárioToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
+            this.bloquearUsuárioToolStripMenuItem.Text = "Bloquear Usuário";
+            this.bloquearUsuárioToolStripMenuItem.Click += new System.EventHandler(this.bloquearUsuárioToolStripMenuItem_Click);
+            // 
             // funcionalidadesToolStripMenuItem
             // 
             this.funcionalidadesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -139,13 +144,6 @@
             this.extraToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
             this.extraToolStripMenuItem.Text = "Extra";
             // 
-            // logoffToolStripMenuItem
-            // 
-            this.logoffToolStripMenuItem.Name = "logoffToolStripMenuItem";
-            this.logoffToolStripMenuItem.Size = new System.Drawing.Size(65, 25);
-            this.logoffToolStripMenuItem.Text = "Logoff";
-            this.logoffToolStripMenuItem.Click += new System.EventHandler(this.logoffToolStripMenuItem_Click);
-            // 
             // BTN_Compra
             // 
             this.BTN_Compra.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BTN_Compra.BackgroundImage")));
@@ -154,7 +152,7 @@
             this.BTN_Compra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Compra.Location = new System.Drawing.Point(5, 18);
             this.BTN_Compra.Name = "BTN_Compra";
-            this.BTN_Compra.Size = new System.Drawing.Size(60, 54);
+            this.BTN_Compra.Size = new System.Drawing.Size(46, 38);
             this.BTN_Compra.TabIndex = 6;
             this.BTN_Compra.UseVisualStyleBackColor = true;
             // 
@@ -166,7 +164,7 @@
             this.BTN_addProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_addProduto.Location = new System.Drawing.Point(71, 18);
             this.BTN_addProduto.Name = "BTN_addProduto";
-            this.BTN_addProduto.Size = new System.Drawing.Size(60, 54);
+            this.BTN_addProduto.Size = new System.Drawing.Size(46, 38);
             this.BTN_addProduto.TabIndex = 7;
             this.BTN_addProduto.UseVisualStyleBackColor = true;
             this.BTN_addProduto.Click += new System.EventHandler(this.button2_Click);
@@ -179,7 +177,7 @@
             this.BTN_addCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_addCliente.Location = new System.Drawing.Point(137, 18);
             this.BTN_addCliente.Name = "BTN_addCliente";
-            this.BTN_addCliente.Size = new System.Drawing.Size(60, 54);
+            this.BTN_addCliente.Size = new System.Drawing.Size(46, 38);
             this.BTN_addCliente.TabIndex = 8;
             this.BTN_addCliente.UseVisualStyleBackColor = true;
             this.BTN_addCliente.Click += new System.EventHandler(this.button3_Click);
@@ -187,27 +185,30 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 75);
+            this.label1.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 21);
+            this.label1.Size = new System.Drawing.Size(58, 17);
             this.label1.TabIndex = 9;
             this.label1.Text = "Produtos";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(141, 75);
+            this.label2.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(134, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 21);
+            this.label2.Size = new System.Drawing.Size(52, 17);
             this.label2.TabIndex = 10;
             this.label2.Text = "Clientes";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(74, 75);
+            this.label3.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(68, 59);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 21);
+            this.label3.Size = new System.Drawing.Size(57, 17);
             this.label3.TabIndex = 11;
             this.label3.Text = "Compras";
             // 
@@ -221,7 +222,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 30);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 93);
+            this.groupBox1.Size = new System.Drawing.Size(190, 87);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             // 
@@ -233,9 +234,9 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(215, 30);
+            this.groupBox2.Location = new System.Drawing.Point(208, 31);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 93);
+            this.groupBox2.Size = new System.Drawing.Size(190, 87);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             // 
@@ -245,18 +246,19 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(71, 18);
+            this.button1.Location = new System.Drawing.Point(68, 18);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 54);
+            this.button1.Size = new System.Drawing.Size(46, 38);
             this.button1.TabIndex = 7;
             this.button1.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(79, 75);
+            this.label4.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(65, 59);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 21);
+            this.label4.Size = new System.Drawing.Size(45, 17);
             this.label4.TabIndex = 11;
             this.label4.Text = "Excluir";
             // 
@@ -266,18 +268,19 @@
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(5, 18);
+            this.button2.Location = new System.Drawing.Point(2, 18);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 54);
+            this.button2.Size = new System.Drawing.Size(46, 38);
             this.button2.TabIndex = 6;
             this.button2.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(144, 75);
+            this.label5.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(131, 59);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 21);
+            this.label5.Size = new System.Drawing.Size(48, 17);
             this.label5.TabIndex = 10;
             this.label5.Text = "Alterar";
             // 
@@ -287,18 +290,19 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(137, 18);
+            this.button3.Location = new System.Drawing.Point(134, 18);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(60, 54);
+            this.button3.Size = new System.Drawing.Size(46, 38);
             this.button3.TabIndex = 8;
             this.button3.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 75);
+            this.label6.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(3, 59);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 21);
+            this.label6.Size = new System.Drawing.Size(43, 17);
             this.label6.TabIndex = 9;
             this.label6.Text = "Incluir";
             // 
@@ -306,18 +310,19 @@
             // 
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Location = new System.Drawing.Point(441, 30);
+            this.groupBox3.Location = new System.Drawing.Point(404, 32);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(75, 92);
+            this.groupBox3.Size = new System.Drawing.Size(75, 86);
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(22, 74);
+            this.label7.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(22, 62);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(36, 21);
+            this.label7.Size = new System.Drawing.Size(29, 17);
             this.label7.TabIndex = 12;
             this.label7.Text = "Sair";
             // 
@@ -327,18 +332,12 @@
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(6, 18);
+            this.button4.Location = new System.Drawing.Point(6, 11);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(60, 54);
+            this.button4.Size = new System.Drawing.Size(56, 48);
             this.button4.TabIndex = 12;
             this.button4.UseVisualStyleBackColor = true;
-            // 
-            // bloquearUsuárioToolStripMenuItem
-            // 
-            this.bloquearUsuárioToolStripMenuItem.Name = "bloquearUsuárioToolStripMenuItem";
-            this.bloquearUsuárioToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
-            this.bloquearUsuárioToolStripMenuItem.Text = "Bloquear Usuário";
-            this.bloquearUsuárioToolStripMenuItem.Click += new System.EventHandler(this.bloquearUsuárioToolStripMenuItem_Click);
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // FrmPrincipal
             // 
@@ -381,7 +380,6 @@
         private System.Windows.Forms.ToolStripMenuItem funcionalidadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calculadoraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem extraToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem logoffToolStripMenuItem;
         private System.Windows.Forms.Button BTN_Compra;
         private System.Windows.Forms.Button BTN_addProduto;
         private System.Windows.Forms.Button BTN_addCliente;

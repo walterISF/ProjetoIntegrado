@@ -48,11 +48,6 @@ namespace Projeto_B
             calculadora.ShowDialog();
         }
 
-        private void logoffToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
 
@@ -82,6 +77,11 @@ namespace Projeto_B
         {
             FrmBloq frmBloquear = new FrmBloq();
             frmBloquear.Show();
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
     }
