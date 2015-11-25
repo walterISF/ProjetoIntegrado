@@ -49,6 +49,14 @@ namespace Projeto_B
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        private void logoffToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+>>>>>>> parent of 93b9dd1... Acertando layout
         private void button4_Click(object sender, EventArgs e)
         {
 
@@ -85,11 +93,6 @@ namespace Projeto_B
         {
             FrmBloq frmBloquear = new FrmBloq();
             frmBloquear.Show();
-        }
-
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
     }
